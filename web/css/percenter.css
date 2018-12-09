@@ -6,6 +6,22 @@ img {
 
 a:link {
     text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+a:active {
+    text-decoration: none;
+    color: red;
 }
 
 .leftbox {
@@ -20,9 +36,10 @@ a:link {
 }
 
 .rightbox {
+    position: absolute;
     float: left;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 370px;
     height: 700px;
     width: 870px;
     border-radius: 5px 5px
@@ -42,20 +59,29 @@ a:link {
     height: 50px;
     width: 150px;
 }
-.Lsecond{
+
+.Lsecond {
+    position: relative;
+    height: 200px;
+    border-bottom: 1px solid;
+}
+
+.secondin {
+    z-index: 2;
+    margin-left: 72px;
+    margin-top: 8px;
+    height: 40px;
+    width: 150px;
+}
+
+.Lthird {
     position: relative;
     height: 150px;
     border-bottom: 1px solid;
 }
-.Lthird{
+
+.Lforth {
     position: relative;
-    height: 150px;
-    border-bottom: 1px solid;
-}
-.Lforth{
-    position: relative;
-    height: 150px;
-    border-bottom: 1px solid;
 }
 
 
@@ -73,6 +99,7 @@ a:link {
     border-radius: 50%;
     height: 80px;
     width: 80px;
+    cursor: pointer
 }
 
 .Rname {
@@ -86,3 +113,26 @@ a:link {
     margin-left: 50px;
     margin-top: 25px;
 }
+
+.Rsecond {
+    background: #eaf4f6;
+    height: 140px;
+    border-style: outset;
+    margin-top: 25px;
+}
+
+.Rmiss{
+    float: left;
+    position:relative;
+    width: 150px;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.Rthird {
+    background: #eaf4f6;
+    height: 380px;
+    border-style: outset;
+    margin-top: 25px;
+}
+

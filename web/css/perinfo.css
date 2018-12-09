@@ -1,0 +1,29 @@
+img {
+    height: 300px;
+    width: 300px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #0f8cf3
+}
+
+a:visited {
+    text-decoration: none;
+    color: #0f8cf3
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+a:active {
+    text-decoration: underline;
+    color: red;
+}
+
+.current image {
+    height: 300px;
+    width: 300px;
+}

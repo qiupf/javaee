@@ -46,6 +46,8 @@ public class UserService implements IUserService {
     @Override
     public boolean modifyImg(File file,String fileName) throws IOException {
         // 文件输入流
+        ActionContext ctx = ActionContext.getContext();
+        session = (Map) ctx.getSession();
         InputStream is=null;
         OutputStream os=null;
         try{
@@ -62,17 +64,18 @@ public class UserService implements IUserService {
             while (-1 != (length = is.read(buffer, 0, buffer.length))) {
                 os.write(buffer);
             }
-            is.close();
-            os.close();
             User user= (User) session.get("user");
             user.setImage(fileName);
             userDao.updateUser(user);
+            session.put("user",user);
             return true;
         }catch (Exception e){
             e.printStackTrace();
             return false;
         }finally {
             // 关闭输入流和输出流
+            is.close();
+            os.close();
         }
     }
 }

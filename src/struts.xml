@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <constant name="struts.multipart.maxSize" value="10485760"></constant>
+    <package name="strutsBean" extends="struts-default" namespace="/">
+        <action name="fileUpload" class="uploadAction">
+            <result name="success" type="redirect">/perinfo.jsp</result>
+            <!--定义上传出错要跳转的页面 -->
+            <result name="input" type="redirect">/perinfo.jsp</result>
+            <interceptor-ref name="defaultStack">
+                <!--限制上传文件最大值为4M -->
+                <param name="fileUpload.maximumSize">4194304</param>
+                <!--当下面两个配置同时存在时，要同时满足下面两个条件，才能上传 -->
+                <!--限制上传文件的扩展名 -->
+                <param name="fileUpload.allowedExtensions">
+                    .jpg,.jpeg,.png
+                </param>
+                <!--限制上传文件的类型 -->
+                <param name="fileUpload.allowedTypes">
+                    image/jpeg
+                </param>
+            </interceptor-ref>
+        </action>
+        <action name="user" class="userAction" method="login">
+            <result name="success" type="redirect">/percenter.jsp</result>
+            <result name="fail" >/login.jsp</result>
+        </action>
+    </package>
+</struts>

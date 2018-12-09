@@ -1,0 +1,88 @@
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.leftbox {
+    background: #fafdf6;
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 700px;
+    width: 300px;
+    border-style: outset;
+    border-radius: 5px 5px
+}
+
+.rightbox {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 700px;
+    width: 870px;
+    border-radius: 5px 5px
+}
+
+.Lfirst {
+    position: relative;
+    height: 100px;
+    border-bottom: 1px solid;
+}
+
+.firstin {
+    position: absolute;
+    z-index: 2;
+    margin-left: 80px;
+    margin-top: 10px;
+    height: 50px;
+    width: 150px;
+}
+.Lsecond{
+    position: relative;
+    height: 150px;
+    border-bottom: 1px solid;
+}
+.Lthird{
+    position: relative;
+    height: 150px;
+    border-bottom: 1px solid;
+}
+.Lforth{
+    position: relative;
+    height: 150px;
+    border-bottom: 1px solid;
+}
+
+
+.Rfirst {
+    background: #eaf4f6;
+    height: 140px;
+    border-style: outset;
+}
+
+.Rimg {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-style: solid;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.Rname {
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.Rlevel {
+    float: left;
+    margin-left: 50px;
+    margin-top: 25px;
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+#head{margin:0 auto;background-color: #140320;height:34px}
+#head .title{float:left;font-size:20px;font-weight:bold;font-family:STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";}
+#head .item{float: right;margin: 10px;padding-right: 10px;border-right: 1px solid #E7D4D4}
+#head .a1:link{text-decoration: none;color: red}
+#head .a1:visited{text-decoration: none;color: red}
+#head .a1:hover{text-decoration: none;color: red}
+#head .a1:active{text-decoration: none;color: red}
+#head .a2:link{text-decoration: none;color:#9B8D8D}
+#head .a2:visited{text-decoration: none;color:#9B8D8D}
+#head .a2:hover{text-decoration: none;color: red}
+#head .a2:active{text-decoration: none;color: red}
+#head input{background: #f9f9f9;border: none;cursor: pointer}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.edu.zjut.po.Customer" table="customer" catalog="hibernatedb">
+		<id name="customerId" column="customerID" type="integer">
+			<generator class="increment" />
+		</id>
+		<property name="account" type="string">
+			<column name="Account" length="20" unique="true" />
+		</property>
+		<property name="password" type="string">
+			<column name="Password" length="20" />
+		</property>
+		<property name="name" type="string">
+			<column name="Name" length="20" />
+		</property>
+		<property name="sex" type="java.lang.Boolean">
+			<column name="Sex"  />
+		</property>
+		<property name="birthday" type="date">
+			<column name="Birthday" />
+		</property>
+		<property name="phone" type="string">
+			<column name="Phone" length="20" />
+		</property>
+		<property name="email" type="string">
+			<column name="Email" length="100" />
+		</property>
+		<property name="address" type="string">
+			<column name="Address" length="200" />
+		</property>
+		<property name="zipcode" type="string">
+			<column name="Zipcode" length="10" />
+		</property>
+		<property name="fax" type="string">
+			<column name="Fax" length="20" />
+		</property>
+	</class>
+</hibernate-mapping>

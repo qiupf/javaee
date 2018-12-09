@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="spring">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/commons-logging-1.2.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-beans-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-context-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-core-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-expression-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-jdbc-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-orm-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-tx-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-web-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/com.springsource.com.mchange.v2.c3p0-0.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

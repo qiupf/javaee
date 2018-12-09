@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="hub.po.admin.Admin" table="admin_" schema="forum">
+    <id name="adminID" type="int">
+        <column name="adminID"/>
+        <generator class="increment"/>
+    </id>
+    <property name="admin_account" type="java.lang.String">
+        <column name="admin_account" length="30"/>
+    </property>
+    <property name="admin_password" type="java.lang.String">
+        <column name="admin_password" length="30"/>
+    </property>
+</class>
+</hibernate-mapping>

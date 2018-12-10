@@ -5,13 +5,31 @@
     <title>登录</title>
     <link href="css/login.css" rel="stylesheet" type="text/css"/>
     <script src="js/verify.js"></script>
-    <s:head />
+    <s:head/>
 </head>
 <body onLoad="createCode()">
 
-<div id="leftimg">
-    <img src="images/zz.jpg">
+<div class="box" id="box">
+    <div class="inner">
+        <ul>
+            <li><a href="#"><img src="images/zy.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/zz.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/wangzhe.jpg" alt=""></a></li>
+        </ul>
+        <ol class="bar">
+        </ol>
+        <div id="arr">
+                    <span id="left">
+                        <
+                    </span>
+            <span id="right">
+                        >
+                    </span>
+        </div>
+    </div>
+
 </div>
+
 <div id="login_box">
     <form action="user.action" method="post" onSubmit="return userCheck()">
         <table>
@@ -57,5 +75,6 @@
         </table>
     </form>
 </div>
+<script src="js/loop.js"></script>
 </body>
 </html>

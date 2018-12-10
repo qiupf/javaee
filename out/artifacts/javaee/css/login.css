@@ -82,3 +82,81 @@ a:active {
     color: blue
 }
 
+
+
+
+
+* {
+    margin: 0;
+    padding: 0
+}
+.box {
+    float: left;
+    position: absolute;
+    margin-top: 100px;
+
+}
+.inner{
+    height: 550px;
+    width: 750px;
+    position: relative;
+    overflow: hidden;;
+}
+.inner img{
+    height: 550px;
+    width: 750px;
+}
+ul {
+    width: 1000%;
+    position: absolute;
+    list-style: none;
+    left:0;
+    top: 0;
+}
+.inner li{
+    float: left;
+}
+
+ol {
+    position: absolute;
+    height: 20px;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+}
+ol li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+ol .current{
+    background-color: red;
+}
+#arr{
+    display: none;
+}
+#arr span{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    background: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #000;
+    opacity: 0.5;
+    border: 1px solid #fff;
+}
+#arr #right {
+    right: 5px;
+    left: auto;
+}

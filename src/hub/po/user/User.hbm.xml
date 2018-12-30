@@ -23,5 +23,11 @@
         <property name="banned" type="boolean">
             <column name="banned" />
         </property>
+
+        <set name="friends" table="friens_" cascade="all">
+            <key column="cid"/>
+            <many-to-many column="fid" class="hub.po.user.User" />
+        </set>
+
     </class>
 </hibernate-mapping>

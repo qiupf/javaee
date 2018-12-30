@@ -1,0 +1,45 @@
+<?xml version="1.0"  encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hub.po.customer.Customer" catalog="forum" table="customer">
+        <id name="id" column="cid" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+
+        <property name="account" type="java.lang.String" column="nickname" length="30"/>
+        <property name="password" type="java.lang.String" column="password" length="20"/>
+        <property name="image" type="java.lang.String" column="image" length="50"/>
+        <property name="banned" type="java.util.Date" column="banned"/>
+        <property name="birthday" type="java.util.Date" column="birthday"/>
+
+        <set name="friends" inverse="true" table="friends" catalog="forum" cascade="all-delete-orphan">
+            <key column="cid"/>
+            <one-to-many class="hub.po.friends.Friend"/>
+        </set>
+
+        <set name="favorModels" table="favormodel" catalog="forum" inverse="true" cascade="all-delete-orphan">
+            <key column="cid"/>
+            <one-to-many class="hub.po.favorModel.FavorModel"/>
+        </set>
+
+        <set name="favorTopics" catalog="forum" table="favortopic" cascade="all-delete-orphan" inverse="true">
+            <key column="cid"/>
+            <one-to-many class="hub.po.favorTopic.FavorTopic"/>
+        </set>
+
+        <set name="discusses" catalog="forum" table="discuss" inverse="true" cascade="all-delete-orphan">
+            <key column="cid"/>
+            <one-to-many class="hub.po.discuss.Discuss"/>
+        </set>
+
+        <set name="topics" catalog="forum" table="topic" inverse="true" cascade="all-delete-orphan">
+            <key column="cid"/>
+            <one-to-many class="hub.po.topic.Topic"/>
+        </set>
+
+    </class>
+</hibernate-mapping>

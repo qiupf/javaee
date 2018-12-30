@@ -1,5 +1,8 @@
 package hub.po.user;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class User {
     private Integer userID;
     private String account;
@@ -7,6 +10,7 @@ public class User {
     private String name;
     private String image;
     private Boolean banned;
+    private Set friends;
 
     public User() {
     }
@@ -57,5 +61,13 @@ public class User {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Set getFriends() {
+        return friends;
+    }
+
+    public void setFriends(Set friends) {
+        this.friends = friends;
     }
 }

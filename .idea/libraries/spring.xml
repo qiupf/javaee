@@ -11,6 +11,9 @@
       <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-tx-4.3.6.RELEASE.jar!/" />
       <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-web-4.3.6.RELEASE.jar!/" />
       <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/com.springsource.com.mchange.v2.c3p0-0.9.1.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/aspectjweaver-1.8.10.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-aop-4.3.6.RELEASE.jar!/" />
+      <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/Spring/spring-aspects-4.3.6.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,0 +1,18 @@
+<?xml version="1.0"  encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hub.po.favorModel.FavorModel" catalog="forum" table="favormodel">
+        <id name="id" column="fmid" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
+        <many-to-one name="model" column="mid" class="hub.po.model.Model"/>
+
+        <property name="date" column="date" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>

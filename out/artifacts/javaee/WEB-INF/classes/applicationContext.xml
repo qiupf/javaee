@@ -16,12 +16,14 @@
         <property name="user" value="root"/>
         <property name="password" value="qiupf1231"/>
         <!--配置数据库连接池(c3p0)-->
-        <property name="initialPoolSize" value="3"/>
+        <property name="initialPoolSize" value="10"/>
         <property name="minPoolSize" value="3"/>
         <property name="maxPoolSize" value="15"/>
         <property name="acquireIncrement" value="3"/>
         <property name="maxIdleTime" value="1800"/>
     </bean>
+
+
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mappingResources">
@@ -39,6 +41,24 @@
             </value>
         </property>
     </bean>
+
+
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="modifyImg" propagation="REQUIRED"/>
+            <tx:method name="*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config proxy-target-class="true">
+        <aop:pointcut id="addServiceMethod" expression="execution(* hub.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="addServiceMethod"/>
+    </aop:config>
+
+
     <bean id="baseDao" class="hub.dao.BaseDao">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
@@ -52,4 +72,7 @@
     <bean id="uploadAction" class="hub.action.UploadAction" scope="prototype">
         <property name="userService" ref="userService"/>
     </bean>
+
+
+
 </beans>

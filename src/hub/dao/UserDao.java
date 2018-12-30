@@ -26,10 +26,7 @@ public class UserDao extends BaseDao implements IUserDao {
     @Override
     public boolean updateUser(User user) {
         try {
-            Session session = getSession();
-            session.beginTransaction();
-            session.update(user);
-            session.getTransaction().commit();
+            getSession().update(user);
             return true;
         } catch (Exception e) {
             e.printStackTrace();

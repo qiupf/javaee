@@ -6,66 +6,95 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46595936-79b2-4d8b-be8d-213994bb6270" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/action/TopicAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/DiscussDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/ICustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/IDiscussDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/IModelDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/ITopicDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/ModelDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/dao/TopicDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/customer/Customer.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/discuss/Discuss.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/discuss/Discuss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/favorModel/FavorModel.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/favorModel/FavorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/favorTopic/FavorTopic.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/favorTopic/FavorTopic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/friends/Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/model/Model.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/topic/Topic.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/po/topic/Topic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/DiscussService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/IDiscussService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/IModelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/ITopicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/ModelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hub/service/TopicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/topic.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e31f7fdf-c463-4b62-a074-d97e1d33e15c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/spring.xml" afterDir="false" />
+    <list default="true" id="46595936-79b2-4d8b-be8d-213994bb6270" name="Default Changelist" comment="add po dao and service">
+      <change afterPath="$PROJECT_DIR$/src/hub/action/AdminAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/action/CustomerAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/action/TestAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/action/VisitorAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/dao/BasicDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/dao/IBasicDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/po/floorDiscuss/FloorDiscuss.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/po/floorDiscuss/FloorDiscuss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/po/letter/Letter.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/po/letter/Letter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/service/admin/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/service/admin/IAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/service/visitor/IVisitorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hub/service/visitor/VisitorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javaee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javaee.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/action/UploadAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/action/UserAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/IUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/dao/UserDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/po/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/po/user/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/po/user/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/po/user/User.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/service/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/hub/test/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/perinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/perinfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/javaee/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/javaee/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaee/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/hub/dao/IUserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/hub/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/action/UploadAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/action/UserAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/hub/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/dao/IUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/dao/UserDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/po/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/hub/po/user/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/po/user/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/hub/po/user/User.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/service/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/service/UserService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaee/hub/test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/hub/test/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/javaee/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaee/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hub/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/dao/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hub/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/action/TopicAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/action/UploadAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/action/UserAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/dao/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/CustomerDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/DiscussDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/ICustomerDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/IDiscussDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/IModelDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/ITopicDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/IUserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/ModelDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/TopicDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/customer/Customer.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/customer/Customer.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/discuss/Discuss.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/floor/Floor.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/discuss/Discuss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/floor/Floor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/favorModel/FavorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/favorModel/FavorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/favorTopic/FavorTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/favorTopic/FavorTopic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/friends/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/friends/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/model/Model.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/model/Model.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/topic/Topic.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/topic/Topic.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/po/topic/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/topic/Topic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hub/po/user/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/user/User.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hub/po/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/po/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hub/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/service/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/DiscussService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/service/customer/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/IDiscussService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/IModelService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/ITopicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/ModelService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/TopicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hub/service/UserService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hub/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hub/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/percenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/percenter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/perinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/perinfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/test.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,66 +137,7 @@
     <favorites_list name="javaee" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hub/dao/ITopicDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hub/service/ModelService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="21" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hub/service/IModelService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hub/service/ITopicService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hub/service/TopicService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#197#198#0" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -181,7 +151,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>code</find>
+      <find>friens</find>
+      <find>fileUpload</find>
     </findStrings>
+    <replaceStrings>
+      <replace>modifyImg</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -189,57 +164,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/personinfo.jsp" />
-        <option value="$PROJECT_DIR$/src/hub/action/UploadAction.java" />
-        <option value="$PROJECT_DIR$/src/struts.xml" />
-        <option value="$PROJECT_DIR$/src/hub/service/IUserService.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/head.jsp" />
-        <option value="$PROJECT_DIR$/web/js/noimg.js" />
-        <option value="$PROJECT_DIR$/web/css/percenter.css" />
-        <option value="$PROJECT_DIR$/web/percenter.jsp" />
-        <option value="$PROJECT_DIR$/web/perinfo.jsp" />
-        <option value="$PROJECT_DIR$/web/css/perinfo.css" />
-        <option value="$PROJECT_DIR$/web/register.jsp" />
-        <option value="$PROJECT_DIR$/web/js/verify.js" />
-        <option value="$PROJECT_DIR$/web/css/login.css" />
-        <option value="$PROJECT_DIR$/web/js/loop.js" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/hub/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/IUserDao.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/DiscussDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/IDiscussService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/DiscussService.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/floor/IDiscussDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/floor/IFloorDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/floor/FloorDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/customer/CustomerDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/friends/Friend.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/floor/DiscussService.java" />
         <option value="$PROJECT_DIR$/src/hub/po/user/User.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/hub/po/user/User.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/topic/BasicDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/BaseDao.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/topic/Topic.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/floor/Floor.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/topic/ITopicService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/floorDiscuss/IFloorDiscussService.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/BasicDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/model/IModelService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/model/ModelService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/letter/ILetterService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/letter/LetterService.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/letter/Letter.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/hub/po/letter/Letter.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/hub/service/friends/FriendService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/friends/IFriendService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/floorDiscuss/FloorDiscussService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/floor/FloorService.java" />
+        <option value="$PROJECT_DIR$/src/hub/dao/IBasicDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/customer/Customer.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/customer/Customer.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/hub/service/admin/AdminService.java" />
+        <option value="$PROJECT_DIR$/web/test.jsp" />
+        <option value="$PROJECT_DIR$/src/hub/po/floorDiscuss/FloorDiscuss.java" />
+        <option value="$PROJECT_DIR$/src/hub/po/floorDiscuss/FloorDiscuss.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/hub/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/topic/TopicService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/visitor/IVisitorService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/visitor/VisitorService.java" />
+        <option value="$PROJECT_DIR$/src/hub/service/customer/ICustomerService.java" />
         <option value="$PROJECT_DIR$/src/hub/action/UserAction.java" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
-        <option value="$PROJECT_DIR$/src/hub/po/user/User.java" />
-        <option value="$PROJECT_DIR$/src/hub/po/friends/Friend.java" />
-        <option value="$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/hub/dao/BaseDao.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/TestDao.java" />
-        <option value="$PROJECT_DIR$/src/hub/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/hub/po/customer/Customer.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/Customer.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/ICustomerDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/CustomerDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/po/discuss/Discuss.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/hub/service/CustomerService.java" />
-        <option value="$PROJECT_DIR$/web/topic.jsp" />
-        <option value="$PROJECT_DIR$/src/hub/service/IDiscussService.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/IModelDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/ModelDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/service/IModelService.java" />
-        <option value="$PROJECT_DIR$/src/hub/service/ModelService.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/hub/po/topic/Topic.java" />
-        <option value="$PROJECT_DIR$/src/hub/po/discuss/Discuss.java" />
-        <option value="$PROJECT_DIR$/src/hub/service/DiscussService.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/IDisscussDAO.java" />
+        <option value="$PROJECT_DIR$/src/hub/action/TestAction.java" />
+        <option value="$PROJECT_DIR$/web/perinfo.jsp" />
+        <option value="$PROJECT_DIR$/src/hub/service/customer/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/web/percenter.jsp" />
         <option value="$PROJECT_DIR$/src/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/hub/dao/ITopicDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/DiscussDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/dao/TopicDAO.java" />
-        <option value="$PROJECT_DIR$/src/hub/service/ITopicService.java" />
-        <option value="$PROJECT_DIR$/src/hub/service/TopicService.java" />
-        <option value="$PROJECT_DIR$/src/hub/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/hub/action/CustomerAction.java" />
       </list>
     </option>
   </component>
@@ -257,18 +232,19 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1706" />
-    <option name="height" value="2762" />
+    <option name="x" value="1280" />
+    <option name="y" value="244" />
+    <option name="width" value="974" />
+    <option name="height" value="1048" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -276,6 +252,32 @@
             <path>
               <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
               <item name="javaee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaee" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaee" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaee" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="javaee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javaee" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="javaee" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
@@ -300,36 +302,6 @@
               <item name="javaee" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="hub" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javaee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hub" type="462c0819:PsiDirectoryNode" />
-              <item name="po" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javaee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hub" type="462c0819:PsiDirectoryNode" />
-              <item name="po" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javaee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hub" type="462c0819:PsiDirectoryNode" />
-              <item name="po" type="462c0819:PsiDirectoryNode" />
-              <item name="discuss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javaee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hub" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -337,18 +309,13 @@
               <item name="javaee" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="hub" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
               <item name="javaee" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javaee" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javaee" type="b2602c69:ProjectViewProjectNode" />
@@ -358,6 +325,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,9 +336,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546173744084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546340450956" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Facets" />
@@ -380,11 +348,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\IDEA_WorkSpace\javaee\src\hub\po\friends" />
-      <recent name="C:\IDEA_WorkSpace\javaee\src\hub\service" />
+      <recent name="C:\IDEA_WorkSpace\javaee\src\hub\action" />
+      <recent name="C:\IDEA_WorkSpace\javaee\src\hub\service\customer" />
       <recent name="C:\IDEA_WorkSpace\javaee\src\hub\po\topic" />
+      <recent name="C:\IDEA_WorkSpace\javaee\src\hub\topic" />
       <recent name="C:\IDEA_WorkSpace\javaee\src\hub\po\model" />
-      <recent name="C:\IDEA_WorkSpace\javaee\src\hub\po\favorTopic" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -399,7 +367,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.7">
     <configuration name="test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hub.test.Test" />
       <module name="javaee" />
@@ -528,7 +496,12 @@
       <workItem from="1546075535083" duration="7369000" />
       <workItem from="1546089580383" duration="9292000" />
       <workItem from="1546099028157" duration="8640000" />
-      <workItem from="1546148426714" duration="21827000" />
+      <workItem from="1546148426714" duration="22841000" />
+      <workItem from="1546251744921" duration="3287000" />
+      <workItem from="1546260679980" duration="13660000" />
+      <workItem from="1546308243166" duration="1796000" />
+      <workItem from="1546310792510" duration="18304000" />
+      <workItem from="1546334523666" duration="6061000" />
     </task>
     <task id="LOCAL-00001" summary="add loop function">
       <created>1544457742510</created>
@@ -537,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544457742511</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add po dao and service">
+      <created>1546173793354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546173793354</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136133000" />
+    <option name="totallyTimeSpent" value="180255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -554,20 +534,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1309" height="925" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.25739408" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4957699" visible="true" weight="0.24860112" />
       <window_info id="Structure" order="1" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
-      <window_info id="Web" order="7" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
+      <window_info id="Web" order="7" sideWeight="0.50423014" side_tool="true" weight="0.24460432" />
       <window_info id="Persistence" order="8" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960032" visible="true" weight="0.28679246" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960032" visible="true" weight="0.47672957" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39874214" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -588,490 +567,359 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.32933652" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.09272582" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.03277378" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.26538768" />
-      <window_info id="Structure" order="1" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
-      <window_info id="Web" order="7" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
-      <window_info id="Persistence" order="8" sideWeight="0.50281423" side_tool="true" weight="0.30215827" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960032" visible="true" weight="0.28679246" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39874214" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32955974" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32955974" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32955974" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003997" side_tool="true" weight="0.32955974" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32955974" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32955974" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" weight="0.32955974" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Spring" order="15" weight="0.32955974" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32955974" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24940048" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32933652" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.09272582" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add loop function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loop function" />
+    <MESSAGE value="add po dao and service" />
+    <option name="LAST_COMMIT_MESSAGE" value="add po dao and service" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/verify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4f96ef73-3e6d-4c07-bfc4-2975d8a95c64/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/action/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#UserAction#0;class#UserAction#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/TestDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/user/User.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#User#0;class#User#0" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1222#1223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="method#UserService#0;class#UserService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/admin/Admin.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/customer/Customer.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="83" lean-forward="true" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/admin/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/topic/Topic.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/model/Model.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/favorTopic/FavorTopic.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/favorModel/FavorModel.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/discuss/Discuss.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/favorModel/FavorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="n#interceptor-ref#0;n#action#0;n#package#0;n#struts#0;n#!!top" />
-            <element signature="n#param#2;n#interceptor-ref#0;n#action#0;n#package#0;n#struts#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/friends/Friend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/ICustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/action/TopicAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/topic.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/ICustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/IDiscussService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4f96ef73-3e6d-4c07-bfc4-2975d8a95c64/schema/forum/table/topic.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4f96ef73-3e6d-4c07-bfc4-2975d8a95c64/schema/forum/table/topic">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4f96ef73-3e6d-4c07-bfc4-2975d8a95c64/schema/forum/table/customer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/DiscussService.java">
+    <entry file="file://$PROJECT_DIR$/src/hub/dao/IBasicDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/IDiscussDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/hub/service/admin/IAdminService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/src/hub/po/admin/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="88" column="11" lean-forward="true" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/IModelDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/ModelDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/TopicDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/ITopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/IModelService.java">
+    <entry file="file://$PROJECT_DIR$/src/hub/service/IBasicService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/letter/LetterService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/letter/ILetterService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/topic/ITopicService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/dao/BasicDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/ModelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="21" selection-end-column="22" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/ITopicDAO.java">
+    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/low/xwork-core-2.3.35.jar!/com/opensymphony/xwork2/ActionContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="104" column="31" selection-start-line="104" selection-start-column="31" selection-end-line="104" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/friends/Friend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/friends/Friend.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/customer/Customer.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/floor/Floor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="92" column="23" lean-forward="true" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1905#1906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/floor/Floor.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/floorDiscuss/FloorDiscuss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/floorDiscuss/FloorDiscuss.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="76" selection-start-line="14" selection-start-column="76" selection-end-line="14" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/floor/FloorService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/floorDiscuss/FloorDiscussService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/friends/FriendService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/model/IModelService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/model/ModelService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/admin/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/topic/TopicService.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/service/visitor/IVisitorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/visitor/VisitorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/action/TopicAction.java" />
+    <entry file="file://$PROJECT_DIR$/src/hub/action/VisitorAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/action/AdminAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/dao/IUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/po/user/User.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/action/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/action/UploadAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/noimg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/action/TestAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/low/xwork-core-2.3.35.jar!/com/opensymphony/xwork2/DefaultActionProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hub/po/customer/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="1615">
+          <caret line="147" column="19" lean-forward="true" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#2862#2863#0" expanded="true" />
+            <element signature="e#2914#2915#0" expanded="true" />
+            <element signature="e#3093#3094#0" expanded="true" />
+            <element signature="e#3123#3124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 9.0/lib/low/xwork-core-2.3.35.jar!/com/opensymphony/xwork2/ActionSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="154" column="18" selection-start-line="154" selection-start-column="18" selection-end-line="154" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/javaee/upload/11.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/perinfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/action/CustomerAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="81" column="14" lean-forward="true" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+          <folding>
+            <element signature="method#register#0;class#CustomerAction#0" />
+            <element signature="method#login#0;class#CustomerAction#0" />
+            <element signature="method#updatePasswd#0;class#CustomerAction#0" />
+            <element signature="method#updateBasicInfo#0;class#CustomerAction#0" />
+            <element signature="method#setFriend#0;class#CustomerAction#0" />
+            <element signature="method#setFavorModel#0;class#CustomerAction#0" />
+            <element signature="method#addTopic#0;class#CustomerAction#0" />
+            <element signature="method#delTopic#0;class#CustomerAction#0" />
+            <element signature="method#sendLetter#0;class#CustomerAction#0" />
+            <element signature="method#floorReply#0;class#CustomerAction#0" />
+            <element signature="method#inFloorReply#0;class#CustomerAction#0" />
+            <element signature="method#praise#0;class#CustomerAction#0" />
+            <element signature="method#step#0;class#CustomerAction#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/percenter.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hub/service/customer/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/dao/DiscussDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/hub/service/customer/ICustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/topic/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/po/discuss/Discuss.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="122">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hub/service/TopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
           </folding>
         </state>
       </provider>

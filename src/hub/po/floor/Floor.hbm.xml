@@ -1,0 +1,27 @@
+<?xml version="1.0"  encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hub.po.floor.Floor" table="floor" catalog="forum">
+        <id name="id" column="fid" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="topic" column="tid" class="hub.po.topic.Topic"/>
+        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
+
+        <property name="floor" column="floor" type="java.lang.Integer"/>
+        <property name="detail" column="detail" type="java.lang.String"/>
+        <property name="date" column="date" type="java.util.Date"/>
+        <property name="good" column="good" type="java.lang.Integer"/>
+        <property name="bad" column="bad" type="java.lang.Integer"/>
+
+        <set name="floorDiscusses" table="floordiscuss" catalog="forum" inverse="true" cascade="all-delete-orphan">
+            <key column="fid"/>
+            <one-to-many class="hub.po.floorDiscuss.FloorDiscuss"/>
+        </set>
+    </class>
+</hibernate-mapping>

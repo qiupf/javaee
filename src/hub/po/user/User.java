@@ -10,7 +10,6 @@ public class User {
     private String name;
     private String image;
     private Boolean banned;
-    private Set friends;
 
     public User() {
     }
@@ -63,11 +62,4 @@ public class User {
         this.image = image;
     }
 
-    public Set getFriends() {
-        return friends;
-    }
-
-    public void setFriends(Set friends) {
-        this.friends = friends;
-    }
 }

@@ -9,6 +9,9 @@
         <id name="id" column="frid" type="java.lang.Integer">
             <generator class="increment"/>
         </id>
+        <property name="date" type="java.util.Date">
+            <column name="date" />
+        </property>
         <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
         <many-to-one name="friends" column="fid" class="hub.po.customer.Customer"/>
     </class>

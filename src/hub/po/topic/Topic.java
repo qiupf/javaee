@@ -1,22 +1,27 @@
 package hub.po.topic;
 
 import hub.po.customer.Customer;
-import hub.po.discuss.Discuss;
+import hub.po.floor.Floor;
+import hub.po.favorTopic.FavorTopic;
 import hub.po.model.Model;
 
 import java.util.Date;
 import java.util.Set;
 
-public class Topic implements Comparable<Topic>{
+public class Topic implements Comparable<Topic> {
     private Integer id;
     private String mode;
     private String name;
     private Boolean top;
     private Date date;
 
-    private Model model;
-    private Customer customer;
-    private Set<Discuss> discusses;//发言记录
+    /* 多对一 */
+    private Model model;//属于哪个模块 mid
+    private Customer customer;//属于哪个客户发起 cid
+
+    /* 一对多 */
+    private Set<Floor> floors;//层发言记录 级联删除 tid
+    private Set<FavorTopic> favorTopics;//被关注 级联删除 tid
 
     public Integer getId() {
         return id;
@@ -58,12 +63,12 @@ public class Topic implements Comparable<Topic>{
         this.date = date;
     }
 
-    public Set<Discuss> getDiscusses() {
-        return discusses;
+    public Set<Floor> getFloors() {
+        return floors;
     }
 
-    public void setDiscusses(Set<Discuss> discusses) {
-        this.discusses = discusses;
+    public void setFloors(Set<Floor> floors) {
+        this.floors = floors;
     }
 
     public Model getModel() {
@@ -82,19 +87,28 @@ public class Topic implements Comparable<Topic>{
         this.customer = customer;
     }
 
+    public Set<FavorTopic> getFavorTopics() {
+        return favorTopics;
+    }
+
+    public void setFavorTopics(Set<FavorTopic> favorTopics) {
+        this.favorTopics = favorTopics;
+    }
+
     @Override
     public int compareTo(Topic o) {
-        if(this.top){
-            if(o.top)
-                return o.id-this.id;
-            else
+        if (this.top) {
+            if (o.top) {
+                return o.id - this.id; //右边比左边大
+            } else {
                 return -1;
-        }
-        else {
-            if(o.top)
+            }
+        } else {
+            if (o.top) {
                 return 1;
-            else
-                return o.id-this.id;
+            } else {
+                return o.id - this.id;
+            }
         }
     }
 }

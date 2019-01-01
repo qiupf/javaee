@@ -14,9 +14,16 @@
         <property name="image" column="image" type="java.lang.String" length="20"/>
         <property name="description" column="description" type="java.lang.String" length="100"/>
 
+        <!-- 话题一对多 级联删除 -->
         <set name="topics" catalog="forum" table="topic" inverse="true" cascade="all-delete-orphan">
             <key column="mid"/>
             <one-to-many class="hub.po.topic.Topic"/>
+        </set>
+
+        <!-- 被关注一对多 级联删除 -->
+        <set name="favorModels" catalog="forum" table="topic" inverse="true" cascade="all-delete-orphan">
+            <key column="mid"/>
+            <one-to-many class="hub.po.favorModel.FavorModel"/>
         </set>
     </class>
 </hibernate-mapping>

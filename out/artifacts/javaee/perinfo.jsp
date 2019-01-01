@@ -9,11 +9,11 @@
 <body>
     <p>当前我的头像</p>
     <div class="current">
-        <img src="upload/${user.image}" onerror="nofind()">
+        <img src="upload/${customer.image}" onerror="nofind()">
     </div>
     <p>修改头像</p>
-    <s:form action="fileUpload" method="post" enctype="multipart/form-data">
-        <s:file name="file" label="选择图片" />
+    <s:form action="modifyImg" method="post" enctype="multipart/form-data">
+        <s:file name="photo" label="选择图片" />
         <s:submit value="确定" />
     </s:form>
     <a href="percenter.jsp">返回个人中心</a>

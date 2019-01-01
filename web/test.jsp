@@ -11,10 +11,9 @@
     <title>test</title>
 </head>
 <body>
-    <form action="user" method="post">
-        <input type="text" name="account">
-        <input type="password" name="password">
-        <input type="submit" value="登录">
+    <form action="test.action" method="post">
+        <input type="text" name="oldpasswd">
+        <input type="submit" value="修改">
     </form>
 
 </body>

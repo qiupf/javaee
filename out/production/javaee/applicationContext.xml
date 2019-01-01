@@ -9,6 +9,8 @@
         http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+    <aop:aspectj-autoproxy />
+    <!--连接池配置-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!--基本配置-->
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
@@ -23,15 +25,17 @@
         <property name="maxIdleTime" value="1800"/>
     </bean>
 
-
+    <!--sessionFactory配置-->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mappingResources">
             <list>
+                <value>hub/po/letter/Letter.hbm.xml</value>
                 <value>hub/po/admin/Admin.hbm.xml</value>
                 <value>hub/po/user/User.hbm.xml</value>
                 <value>hub/po/customer/Customer.hbm.xml</value>
-                <value>hub/po/discuss/Discuss.hbm.xml</value>
+                <value>hub/po/floor/Floor.hbm.xml</value>
+                <value>hub/po/floorDiscuss/FloorDiscuss.hbm.xml</value>
                 <value>hub/po/favorModel/FavorModel.hbm.xml</value>
                 <value>hub/po/favorTopic/FavorTopic.hbm.xml</value>
                 <value>hub/po/friends/Friend.hbm.xml</value>
@@ -49,55 +53,58 @@
         </property>
     </bean>
 
+    <!--TransactionManager配置-->
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            <tx:method name="modifyImg" propagation="REQUIRED"/>
             <tx:method name="register" propagation="REQUIRED"/>
-            <tx:method name="delete" propagation="REQUIRED"/>
-            <tx:method name="login" propagation="REQUIRED"/>
-            <tx:method name="update" propagation="REQUIRED"/>
+            <tx:method name="updatePasswd" propagation="REQUIRED"/>
+            <tx:method name="updateBasicInfo" propagation="REQUIRED"/>
+            <tx:method name="modifyImg" propagation="REQUIRED"/>
             <tx:method name="setFriend" propagation="REQUIRED"/>
             <tx:method name="setFavorModel" propagation="REQUIRED"/>
+            <tx:method name="setFavorTopic" propagation="REQUIRED"/>
             <tx:method name="addTopic" propagation="REQUIRED"/>
             <tx:method name="delTopic" propagation="REQUIRED"/>
+            <tx:method name="sendLetter" propagation="REQUIRED"/>
+            <tx:method name="floorReply" propagation="REQUIRED"/>
+            <tx:method name="inFloorReply" propagation="REQUIRED"/>
+            <tx:method name="praise" propagation="REQUIRED"/>
+            <tx:method name="step" propagation="REQUIRED"/>
             <tx:method name="*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+    <!--事务切面配置-->
     <aop:config proxy-target-class="true">
-        <aop:pointcut id="addServiceMethod" expression="execution(* hub.service.*.*(..))"/>
+        <aop:pointcut id="addServiceMethod" expression="execution(* hub.service.*.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="addServiceMethod"/>
     </aop:config>
 
 
+    <!--DAO层配置-->
     <bean id="baseDao" class="hub.dao.BaseDao">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-    <bean id="userDao" class="hub.dao.UserDao" parent="baseDao"/>
-    <bean id="userService" class="hub.service.UserService">
-        <property name="userDao" ref="userDao"/>
+    <bean id="basicDao" class="hub.dao.BasicDAO" parent="baseDao" />
+
+    <!--Service层配置-->
+    <bean id="adminService" class="hub.service.admin.AdminService">
+        <property name="basicDAO" ref="basicDao" />
     </bean>
-    <bean id="modelDao" class="hub.dao.ModelDAO" parent="baseDao" />
-    <bean id="modelService" class="hub.service.ModelService">
-        <property name="modelDAO" ref="modelDao"/>
+    <bean id="customerService" class="hub.service.customer.CustomerService">
+        <property name="basicDAO" ref="basicDao" />
     </bean>
-    <bean id="topicDao" class="hub.dao.TopicDAO" parent="baseDao" />
-    <bean id="topicService" class="hub.service.TopicService">
-        <property name="topicDAO" ref="topicDao" />
-    </bean>
-    <bean name="disscussDao" class="hub.dao.DiscussDAO" />
-    <bean id="disscussService" class="hub.service.DiscussService">
-        <property name="discussDAO" ref="disscussDao" />
+    <bean id="visitorService" class="hub.service.visitor.VisitorService">
+        <property name="basicDAO" ref="basicDao" />
     </bean>
 
+    
+    <!--Action层配置-->
+    <bean id="customerAction" class="hub.action.CustomerAction" scope="prototype">
+        <property name="customerService" ref="customerService" />
+    </bean>
 
-    <bean id="userAction" class="hub.action.UserAction" scope="prototype">
-        <property name="userService" ref="userService"/>
-    </bean>
-    <bean id="uploadAction" class="hub.action.UploadAction" scope="prototype">
-        <property name="userService" ref="userService"/>
-    </bean>
 
 </beans>

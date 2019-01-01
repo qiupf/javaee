@@ -64,11 +64,11 @@
 <div class="rightbox">
     <div class="Rfirst">
         <div class="Rimg">
-            <img src="upload/${user.image}" onerror="nofind()">
+            <img src="upload/${customer.image}" onerror="nofind()">
         </div>
         <div class="Rname">
             <p style="font-size: 25px">
-                ${user.name}
+                ${customer.account}
             </p>
             <p>
                 论坛积分：20

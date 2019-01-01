@@ -31,7 +31,7 @@
 </div>
 
 <div id="login_box">
-    <form action="user.action" method="post" onSubmit="return userCheck()">
+    <form action="login.action" method="post" onSubmit="return userCheck()">
         <table>
             <tr>
                 <td align="center" class="head">登录</td>
@@ -40,12 +40,12 @@
                 <td>&nbsp; <s:actionerror/></td>
             </tr>
             <tr>
-                <td width=280 height=50><input class="txt" type="text" name="user.account" placeholder="账号/邮箱/手机"
+                <td width=280 height=50><input class="txt" type="text" name="loginUser.id" placeholder="账号/邮箱/手机"
                                                id="name"/>
                 </td>
             </tr>
             <tr>
-                <td width=280 height=50><input class="txt" type="password" name="user.password" placeholder="密码"
+                <td width=280 height=50><input class="txt" type="password" name="loginUser.password" placeholder="密码"
                                                id="passwd"/>
                 </td>
             </tr>

@@ -7,9 +7,12 @@ import java.util.Date;
 
 public class FavorModel {
     private Integer id;
-    private Customer customer;
-    private Model model;
     private Date date;
+
+    /* 多对一 */
+    private Customer customer;//喜欢该模块的用户
+    private Model model;//该模块
+
 
     public Integer getId() {
         return id;

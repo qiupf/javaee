@@ -6,27 +6,25 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
     <constant name="struts.multipart.maxSize" value="10485760"></constant>
     <package name="strutsBean" extends="struts-default" namespace="/">
-        <action name="fileUpload" class="uploadAction">
-            <result name="success" type="redirect">/perinfo.jsp</result>
-            <!--定义上传出错要跳转的页面 -->
-            <result name="input" type="redirect">/perinfo.jsp</result>
-            <interceptor-ref name="defaultStack">
-                <!--限制上传文件最大值为4M -->
-                <param name="fileUpload.maximumSize">4194304</param>
-                <!--当下面两个配置同时存在时，要同时满足下面两个条件，才能上传 -->
-                <!--限制上传文件的扩展名 -->
-                <param name="fileUpload.allowedExtensions">
+        <action name="modifyImg" class="customerAction" method="modifyImg">
+            <result name="modifyImgSuccess" type="redirect">/perinfo.jsp</result>
+            <!--<interceptor-ref name="defaultStack">
+                &lt;!&ndash;限制上传文件最大值为4M &ndash;&gt;
+                <param name="modifyImg.maximumSize">4194304</param>
+                &lt;!&ndash;当下面两个配置同时存在时，要同时满足下面两个条件，才能上传 &ndash;&gt;
+                &lt;!&ndash;限制上传文件的扩展名 &ndash;&gt;
+                <param name="modifyImg.allowedExtensions">
                     .jpg,.jpeg,.png
                 </param>
-                <!--限制上传文件的类型 -->
-                <param name="fileUpload.allowedTypes">
+                &lt;!&ndash;限制上传文件的类型 &ndash;&gt;
+                <param name="modifyImg.allowedTypes">
                     image/jpeg
                 </param>
-            </interceptor-ref>
+            </interceptor-ref>-->
         </action>
-        <action name="user" class="userAction" method="login">
-            <result name="success" type="redirect">/percenter.jsp</result>
-            <result name="fail" >/login.jsp</result>
+        <action name="login" class="customerAction" method="login">
+            <result name="loginSuccess" type="redirect">/percenter.jsp</result>
+            <result name="loginFail">/login.jsp</result>
         </action>
     </package>
 </struts>

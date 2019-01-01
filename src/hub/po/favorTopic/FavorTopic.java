@@ -7,9 +7,11 @@ import java.util.Date;
 
 public class FavorTopic {
     private Integer id;
-    private Customer customer;
-    private Topic topic;
     private Date date;
+
+    /* 多对一 */
+    private Customer customer;//喜欢该话题的用户
+    private Topic topic;
 
     public Integer getId() {
         return id;

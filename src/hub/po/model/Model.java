@@ -1,16 +1,19 @@
 package hub.po.model;
 
+import hub.po.favorModel.FavorModel;
 import hub.po.topic.Topic;
 
 import java.util.Set;
 
-public class Model {
+public class Model implements Comparable<Model>{
     private Integer id;
     private String name;
     private String image;
     private String description;
 
-    private Set<Topic> topics;//查话题
+    /* 一对多 */
+    private Set<Topic> topics;//查话题 级联删除属于该模块的话题
+    private Set<FavorModel> favorModels;//被关注 级联删除被关注的模块
 
     public Integer getId() {
         return id;
@@ -50,5 +53,18 @@ public class Model {
 
     public void setTopics(Set<Topic> topics) {
         this.topics = topics;
+    }
+
+    public Set<FavorModel> getFavorModels() {
+        return favorModels;
+    }
+
+    public void setFavorModels(Set<FavorModel> favorModels) {
+        this.favorModels = favorModels;
+    }
+
+    @Override
+    public int compareTo(Model o) {
+        return o.id-this.id;
     }
 }

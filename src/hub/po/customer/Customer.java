@@ -1,5 +1,13 @@
 package hub.po.customer;
 
+import hub.po.favorModel.FavorModel;
+import hub.po.favorTopic.FavorTopic;
+import hub.po.floor.Floor;
+import hub.po.floorDiscuss.FloorDiscuss;
+import hub.po.friends.Friend;
+import hub.po.letter.Letter;
+import hub.po.topic.Topic;
+
 import java.util.Date;
 import java.util.Set;
 
@@ -11,11 +19,18 @@ public class Customer {
     private Date banned;
     private Date birthday;
 
-    private Set friends;//好友
-    private Set favorModels;//关注的模块
-    private Set favorTopics;//关注的话题
-    private Set discusses;//发言记录
-    private Set topics;//发布过的话题
+    private Set<Friend> friends;//好友 级联删除好友表
+    private Set<FavorModel> favorModels;//关注的模块 级联删除关注模块表
+    private Set<FavorTopic> favorTopics;//关注的话题 级联删除关注话题表
+
+    private Set<Topic> topics;//发布过的话题 级联删除发布过的话题
+    private Set<Floor> floors;//层发言记录 级联删除floor表
+    private Set<FloorDiscuss> floorDiscusses;//层内发言记录 级联删除
+    private Set<Letter> send;       //私信发送方
+    private Set<Letter> receive;   //私信接收方
+    private Set<Friend> follows;//被关注 追随者 若客户注销 级联删除好友表
+    /* 保留被关注和被回复 */
+    //private Set<FloorDiscuss> floorReplys;//层内被回复
 
     public Integer getId() {
         return id;
@@ -65,43 +80,75 @@ public class Customer {
         this.birthday = birthday;
     }
 
-    public Set getFriends() {
+    public Set<Friend> getFriends() {
         return friends;
     }
 
-    public void setFriends(Set friends) {
+    public void setFriends(Set<Friend> friends) {
         this.friends = friends;
     }
 
-    public Set getFavorModels() {
+    public Set<FavorModel> getFavorModels() {
         return favorModels;
     }
 
-    public void setFavorModels(Set favorModels) {
+    public void setFavorModels(Set<FavorModel> favorModels) {
         this.favorModels = favorModels;
     }
 
-    public Set getFavorTopics() {
+    public Set<FavorTopic> getFavorTopics() {
         return favorTopics;
     }
 
-    public void setFavorTopics(Set favorTopics) {
+    public void setFavorTopics(Set<FavorTopic> favorTopics) {
         this.favorTopics = favorTopics;
     }
 
-    public Set getDiscusses() {
-        return discusses;
+    public Set<Floor> getFloors() {
+        return floors;
     }
 
-    public void setDiscusses(Set discusses) {
-        this.discusses = discusses;
+    public void setFloors(Set<Floor> floors) {
+        this.floors = floors;
     }
 
-    public Set getTopics() {
+    public Set<Topic> getTopics() {
         return topics;
     }
 
-    public void setTopics(Set topics) {
+    public void setTopics(Set<Topic> topics) {
         this.topics = topics;
+    }
+
+    public Set<FloorDiscuss> getFloorDiscusses() {
+        return floorDiscusses;
+    }
+
+    public void setFloorDiscusses(Set<FloorDiscuss> floorDiscusses) {
+        this.floorDiscusses = floorDiscusses;
+    }
+
+    public Set<Letter> getSend() {
+        return send;
+    }
+
+    public void setSend(Set<Letter> send) {
+        this.send = send;
+    }
+
+    public Set<Letter> getReceive() {
+        return receive;
+    }
+
+    public void setReceive(Set<Letter> receive) {
+        this.receive = receive;
+    }
+
+    public Set<Friend> getFollows() {
+        return follows;
+    }
+
+    public void setFollows(Set<Friend> follows) {
+        this.follows = follows;
     }
 }

@@ -20,20 +20,24 @@
             <key column="cid"/>
             <one-to-many class="hub.po.friends.Friend"/>
         </set>
+        <set name="follows" catalog="forum"  table="friends" inverse="true" cascade="all-delete-orphan">
+            <key column="fid"/>
+            <one-to-many class="hub.po.friends.Friend"/>
+        </set>
 
         <set name="favorModels" table="favormodel" catalog="forum" inverse="true" cascade="all-delete-orphan">
             <key column="cid"/>
             <one-to-many class="hub.po.favorModel.FavorModel"/>
         </set>
 
-        <set name="favorTopics" catalog="forum" table="favortopic" cascade="all-delete-orphan" inverse="true">
+        <set name="favorTopics" catalog="forum" table="favortopic" inverse="true" cascade="all-delete-orphan">
             <key column="cid"/>
             <one-to-many class="hub.po.favorTopic.FavorTopic"/>
         </set>
 
-        <set name="discusses" catalog="forum" table="discuss" inverse="true" cascade="all-delete-orphan">
+        <set name="floors" catalog="forum" table="floor" inverse="true" cascade="all-delete-orphan">
             <key column="cid"/>
-            <one-to-many class="hub.po.discuss.Discuss"/>
+            <one-to-many class="hub.po.floor.Floor"/>
         </set>
 
         <set name="topics" catalog="forum" table="topic" inverse="true" cascade="all-delete-orphan">
@@ -41,5 +45,19 @@
             <one-to-many class="hub.po.topic.Topic"/>
         </set>
 
+        <set name="floorDiscusses" catalog="forum" table="floordiscuss" inverse="true" cascade="all-delete-orphan">
+            <key column="cid"/>
+            <one-to-many class="hub.po.floorDiscuss.FloorDiscuss"/>
+        </set>
+
+        <set name="send" catalog="forum"  inverse="true" cascade="all-delete-orphan">
+            <key column="sid" />
+            <one-to-many class="hub.po.letter.Letter" />
+        </set>
+
+        <set name="receive" catalog="forum"  inverse="true" cascade="all-delete-orphan">
+            <key column="rid"/>
+            <one-to-many class="hub.po.letter.Letter" />
+        </set>
     </class>
 </hibernate-mapping>

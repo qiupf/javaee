@@ -2,8 +2,13 @@ package hub.po.friends;
 
 import hub.po.customer.Customer;
 
+import java.util.Date;
+
 public class Friend {
     private Integer id;
+    private Date date;
+
+    /* 多对一 */
     private Customer customer;
     private Customer friends;
 
@@ -13,6 +18,14 @@ public class Friend {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Customer getCustomer() {

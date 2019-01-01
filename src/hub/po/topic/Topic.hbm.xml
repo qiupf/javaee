@@ -18,9 +18,16 @@
         <property name="top" column="top" type="java.lang.Boolean"/>
         <property name="date" column="date" type="java.util.Date"/>
 
-        <set name="discusses" catalog="forum" table="discuss" inverse="true" cascade="all-delete-orphan">
+        <!-- 发言记录一对多 级联删除 -->
+        <set name="floors" catalog="forum" table="discuss" inverse="true" cascade="all-delete-orphan">
             <key column="tid"/>
-            <one-to-many class="hub.po.discuss.Discuss"/>
+            <one-to-many class="hub.po.floor.Floor"/>
+        </set>
+
+        <!-- 被关注一对多 级联删除 -->
+        <set name="favorTopics" catalog="forum" table="favortopic" inverse="true" cascade="all-delete-orphan">
+            <key column="tid"/>
+            <one-to-many class="hub.po.favorTopic.FavorTopic"/>
         </set>
     </class>
 </hibernate-mapping>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
@@ -25,7 +25,7 @@
             <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="perinfo.jsp">个人资料</a></span>
         </div>
         <div class="secondin">
-            <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="perinfo.jsp">修改头像</a></span>
+            <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="modifyImg.jsp">修改头像</a></span>
         </div>
         <div class="secondin">
             <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="#">账号绑定</a></span>

@@ -11,10 +11,6 @@ import java.io.IOException;
 import java.util.List;
 
 public interface ICustomerService {
-    boolean register(Customer customer);        //注册
-
-    boolean login(Customer customer);           //登录
-
     boolean updatePasswd(Customer customer,String oldpasswd);   //修改密码
 
     void updateBasicInfo(Customer customer);    //修改基本资料

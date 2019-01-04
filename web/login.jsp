@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charest=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
@@ -8,7 +8,7 @@
     <s:head/>
 </head>
 <body onLoad="createCode()">
-
+<%@include file="WEB-INF/head.jsp" %>
 <div class="box" id="box">
     <div class="inner">
         <ul>
@@ -29,9 +29,9 @@
     </div>
 
 </div>
-
+<%--<s:fielderror />--%>
 <div id="login_box">
-    <form action="login.action" method="post" onSubmit="return userCheck()">
+    <s:form action="login" method="post" onSubmit="return userCheck()">
         <table>
             <tr>
                 <td align="center" class="head">登录</td>
@@ -40,7 +40,7 @@
                 <td>&nbsp; <s:actionerror/></td>
             </tr>
             <tr>
-                <td width=280 height=50><input class="txt" type="text" name="loginUser.id" placeholder="账号/邮箱/手机"
+                <td width=280 height=50><input class="txt" type="text" name="loginUser.id" placeholder="账号"
                                                id="name"/>
                 </td>
             </tr>
@@ -73,7 +73,7 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
-    </form>
+    </s:form>
 </div>
 <script src="js/loop.js"></script>
 </body>

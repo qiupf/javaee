@@ -76,12 +76,12 @@
             <tx:method name="*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+
     <!--事务切面配置-->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="addServiceMethod" expression="execution(* hub.service.*.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="addServiceMethod"/>
     </aop:config>
-
 
     <!--DAO层配置-->
     <bean id="baseDao" class="hub.dao.BaseDao">
@@ -100,11 +100,22 @@
         <property name="basicDAO" ref="basicDao" />
     </bean>
 
-    
     <!--Action层配置-->
+    <bean id="adminAction" class="hub.action.AdminAction" scope="prototype">
+        <property name="adminService" ref="adminService" />
+    </bean>
     <bean id="customerAction" class="hub.action.CustomerAction" scope="prototype">
         <property name="customerService" ref="customerService" />
     </bean>
+    <bean id="visitorAction" class="hub.action.VisitorAction" scope="prototype">
+        <property name="visitorService" ref="visitorService" />
+    </bean>
 
+    <!--测试action-->
+    <bean id="testAction" class="hub.action.TestAction">
+        <property name="adminService" ref="adminService" />
+        <property name="customerService" ref="customerService" />
+        <property name="visitorService" ref="visitorService" />
+    </bean>
 
 </beans>

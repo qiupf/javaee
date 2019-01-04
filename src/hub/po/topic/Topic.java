@@ -12,6 +12,7 @@ public class Topic implements Comparable<Topic> {
     private Integer id;
     private String mode;
     private String name;
+    private String content;
     private Boolean top;
     private Date date;
 
@@ -45,6 +46,14 @@ public class Topic implements Comparable<Topic> {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public Boolean getTop() {

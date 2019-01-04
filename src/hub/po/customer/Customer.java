@@ -16,6 +16,7 @@ public class Customer {
     private String account;
     private String password;
     private String image;
+    private String motto;
     private Date banned;
     private Date birthday;
 
@@ -62,6 +63,14 @@ public class Customer {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getMotto() {
+        return motto;
+    }
+
+    public void setMotto(String motto) {
+        this.motto = motto;
     }
 
     public Date getBanned() {

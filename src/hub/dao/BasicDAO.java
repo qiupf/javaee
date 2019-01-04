@@ -1,6 +1,5 @@
 package hub.dao;
 
-import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 public class BasicDAO<T> extends BaseDao implements IBasicDAO<T>{

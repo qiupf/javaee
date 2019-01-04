@@ -24,29 +24,7 @@ public class CustomerService implements ICustomerService {
     private Map<String, Object> session;
     private Map params;
 
-    public CustomerService(){
-    }
-
-
-    @Override
-    public boolean register(Customer customer) {
-        basicDAO.save(customer);
-        session.put("customerId", customer.getId());
-        return true;
-    }
-
-    @Override
-    public boolean login(Customer customer) {
-        session= ActionContext.getContext().getSession();
-        String hql = "from Customer where id=" + customer.getId() + " and password='" + customer.getPassword() + "'";
-        List list = basicDAO.query(hql);
-        if (list.isEmpty()) {
-            return false;
-        } else {
-            customer = (Customer) list.get(0);
-            session.put("customer", customer);
-            return true;
-        }
+    public CustomerService() {
     }
 
     @Override
@@ -67,7 +45,7 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void modifyImg(File file, String fileName) throws IOException {
-        session= ActionContext.getContext().getSession();
+        session = ActionContext.getContext().getSession();
         // 文件输入流
         InputStream is = null;
         OutputStream os = null;

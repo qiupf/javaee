@@ -29,23 +29,6 @@ public class CustomerAction extends ActionSupport {
 
     }
 
-    //注册
-    public String register() {
-        if (customerService.register(loginUser)) {
-            return "registerSuccess";
-        }
-        return "registerFail";
-    }
-
-    //登录
-    public String login() {
-        if (customerService.login(loginUser)) {
-            return "loginSuccess";
-        }
-        this.addActionError("用户名或密码错误，请重新输入！");
-        return "loginFail";
-    }
-
     //修改密码
     public String updatePasswd() {
         //获取从请求传过来的原密码
@@ -65,8 +48,12 @@ public class CustomerAction extends ActionSupport {
     //修改头像
     public String modifyImg() throws IOException {
         params = ActionContext.getContext().getParameters();
-        String fileName=((String[]) params.get("photoFileName"))[0];
-        customerService.modifyImg(photo,fileName);
+        try {
+            String fileName=((String[]) params.get("photoFileName"))[0];
+            customerService.modifyImg(photo,fileName);
+        }catch (Exception e){
+            return "modifyImgFail";
+        }
         return "modifyImgSuccess";
     }
 

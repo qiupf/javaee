@@ -1,0 +1,20 @@
+<?xml version="1.0"  encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hub.po.floorDiscuss.FloorDiscuss" catalog="forum" table="floordiscuss">
+        <id name="id" column="fdid" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
+        <many-to-one name="reply" column="rcid" class="hub.po.customer.Customer"/>
+        <many-to-one name="floor" column="fid" class="hub.po.floor.Floor" />
+
+        <property name="detail" type="java.lang.String" column="detail" length="200"/>
+        <property name="date" type="java.util.Date" column="date"/>
+    </class>
+</hibernate-mapping>

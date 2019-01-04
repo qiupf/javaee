@@ -3,28 +3,46 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+    <!--开启DMI-->
     <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
-    <constant name="struts.multipart.maxSize" value="10485760"></constant>
     <package name="strutsBean" extends="struts-default" namespace="/">
+        <!--配置权限管理器-->
+        <interceptors>
+            <interceptor name="accessInterceptor" class="hub.interceptor.AccsessInterceptor"/>
+        </interceptors>
+
         <action name="modifyImg" class="customerAction" method="modifyImg">
-            <result name="modifyImgSuccess" type="redirect">/perinfo.jsp</result>
-            <!--<interceptor-ref name="defaultStack">
-                &lt;!&ndash;限制上传文件最大值为4M &ndash;&gt;
-                <param name="modifyImg.maximumSize">4194304</param>
-                &lt;!&ndash;当下面两个配置同时存在时，要同时满足下面两个条件，才能上传 &ndash;&gt;
-                &lt;!&ndash;限制上传文件的扩展名 &ndash;&gt;
-                <param name="modifyImg.allowedExtensions">
+            <result name="modifyImgSuccess" type="redirect">/modifyImg.jsp</result>
+            <result name="modifyImgFail" type="redirect">/modifyImgFail.jsp</result>
+            <result name="login" type="redirect">/login.jsp</result>
+            <result name="input" type="redirect">/modifyImgFail.jsp</result>
+            <interceptor-ref name="defaultStack">
+                <!--限制上传文件最大值为10M-->
+                <param name="fileUpload.maximumSize">10485760</param>
+                <!--限制上传文件的扩展名 -->
+                <param name="fileUpload.allowedExtensions">
                     .jpg,.jpeg,.png
                 </param>
-                &lt;!&ndash;限制上传文件的类型 &ndash;&gt;
-                <param name="modifyImg.allowedTypes">
-                    image/jpeg
-                </param>
-            </interceptor-ref>-->
+            </interceptor-ref>
+            <interceptor-ref name="accessInterceptor"/>
         </action>
-        <action name="login" class="customerAction" method="login">
+
+        <action name="login" class="visitorAction" method="login">
             <result name="loginSuccess" type="redirect">/percenter.jsp</result>
             <result name="loginFail">/login.jsp</result>
+            <result name="input">/login.jsp</result>
         </action>
+
+        <action name="*Action" class="visitorAction" method="{1}">
+            <result name="loadModelSuccess" type="redirect">/home.jsp</result>
+            <result name="loadTopicSuccess" type="redirect">/topic.jsp</result>
+            <result name="loadFloorSuccess" type="redirect">/floor.jsp</result>
+        </action>
+
+
+        <action name="test" class="testAction" method="test">
+            <result name="success">/topic.jsp</result>
+        </action>
+
     </package>
 </struts>

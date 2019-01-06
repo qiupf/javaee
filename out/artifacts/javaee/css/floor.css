@@ -47,6 +47,7 @@ img{
     height: 500px;
     width: 250px;
     background-color: #cff3f6;
+    margin-top: 10px;
 }
 
 .inleft1 {
@@ -69,11 +70,13 @@ img{
 }
 
 .rightitem {
+    margin-top: 10px;
     float: left;
     margin-left: 10px;
     height: 500px;
     width: 940px;
     background-color: #f3f2fb;
+
 }
 
 .inright1{

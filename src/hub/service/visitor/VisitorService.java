@@ -64,12 +64,21 @@ public class VisitorService implements IVisitorService {
         Topic topic = getTopicById(tid);
         Set temp = topic.getFloors();
         List<Floor> floors = new ArrayList(temp);
+        topic.getCustomer().getTopics();
         Collections.sort(floors);
+        for(Topic t:topic.getCustomer().getTopics())
+            t.getCustomer();
         for (Floor f : floors) {
-            System.out.println(f.getCustomer().getAccount());
-            System.out.println("aaaa");
+            for(Topic t:f.getCustomer().getTopics())
+                t.getCustomer();
         }
         return floors;
+    }
+
+    @Override
+    public Customer getCustomerById(Integer id) {
+        String hql="from Customer where id="+id;
+        return (Customer) basicDAO.query(hql).get(0);
     }
 
     private Model getModelById(Integer id) {

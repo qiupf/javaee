@@ -38,7 +38,7 @@
         </p>
         <br>
         <p>
-            发帖数：
+            发帖数：<s:property value="topic.customer.topics.size" />
         </p>
         <br>
         <span>
@@ -69,6 +69,56 @@
         </div>
     </div>
 </div>
+<s:iterator value="#session.floors" status="status">
+    <div class="leftitem">
+        <div class="inleft1">
+        <span style="display:inline-block;margin-top: 30px;margin-left: 90px;font-size: 25px">
+            <a href="#">${customer.account}</a>
+        </span>
+        </div>
+        <div class="inleft2">
+        <span style="display:inline-block;margin-top: 20px;margin-left: 30px;font-size: 25px">
+            <img style="cursor: pointer" src="upload/${customer.image}" onerror="nofind()">
+        </span>
+        </div>
+        <div class="inleft3">
+            <p>
+                    ${customer.motto}
+            </p>
+            <br>
+            <p>
+                发帖数：<s:property value="customer.topics.size" />
+            </p>
+            <br>
+            <span>
+            <form style="display:inline">
+                <input type="submit" value="私信" style="cursor: pointer">
+            </form>
+            &emsp;&emsp;
+            <form style="display:inline">
+                <input type="submit" value="关注" style="cursor: pointer">
+            </form>
+        </span>
+        </div>
+    </div>
+    <div class="rightitem">
+        <div class="inright1">
+            <div style="float: right;margin-top:7px;margin-right: 5px">
+                ${status.count}楼
+            </div>
+        </div>
+        <div class="inright2">
+                ${detail}
+        </div>
+        <div class="inright1">
+            <div style="float: right;margin-top:7px;margin-right: 5px">
+                <a href="#">赞</a>
+                &emsp;&emsp;
+                <a href="#">踩</a>
+            </div>
+        </div>
+    </div>
+</s:iterator>
 
 </body>
 </html>

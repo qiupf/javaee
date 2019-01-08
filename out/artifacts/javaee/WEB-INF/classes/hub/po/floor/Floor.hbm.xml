@@ -10,8 +10,8 @@
             <generator class="increment"/>
         </id>
 
-        <many-to-one name="topic" column="tid" class="hub.po.topic.Topic"/>
-        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
+        <many-to-one name="topic" column="tid" class="hub.po.topic.Topic" />
+        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer" lazy="false"/>
 
         <property name="floor" column="floor" type="java.lang.Integer"/>
         <property name="detail" column="detail" type="java.lang.String"/>
@@ -19,7 +19,8 @@
         <property name="good" column="good" type="java.lang.Integer"/>
         <property name="bad" column="bad" type="java.lang.Integer"/>
 
-        <set name="floorDiscusses" table="floordiscuss" catalog="forum" inverse="true" cascade="all-delete-orphan">
+        <set name="floorDiscusses" table="floordiscuss" catalog="forum" inverse="true" cascade="all-delete-orphan"
+             lazy="false">
             <key column="fid"/>
             <one-to-many class="hub.po.floorDiscuss.FloorDiscuss"/>
         </set>

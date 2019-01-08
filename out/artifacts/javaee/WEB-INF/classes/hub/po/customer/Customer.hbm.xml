@@ -17,46 +17,46 @@
         <property name="banned" type="java.util.Date" column="banned"/>
         <property name="birthday" type="java.util.Date" column="birthday"/>
 
-        <set name="friends" inverse="true" table="friends" catalog="forum" cascade="all-delete-orphan">
+        <set name="friends" inverse="true" table="friends" catalog="forum" cascade="all-delete-orphan" lazy="false">
             <key column="cid"/>
             <one-to-many class="hub.po.friends.Friend"/>
         </set>
-        <set name="follows" catalog="forum"  table="friends" inverse="true" cascade="all-delete-orphan">
+        <set name="follows" catalog="forum"  table="friends" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="fid"/>
             <one-to-many class="hub.po.friends.Friend"/>
         </set>
 
-        <set name="favorModels" table="favormodel" catalog="forum" inverse="true" cascade="all-delete-orphan">
+        <set name="favorModels" table="favormodel" catalog="forum" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="cid"/>
             <one-to-many class="hub.po.favorModel.FavorModel"/>
         </set>
 
-        <set name="favorTopics" catalog="forum" table="favortopic" inverse="true" cascade="all-delete-orphan">
+        <set name="favorTopics" catalog="forum" table="favortopic" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="cid"/>
             <one-to-many class="hub.po.favorTopic.FavorTopic"/>
         </set>
 
-        <set name="floors" catalog="forum" table="floor" inverse="true" cascade="all-delete-orphan">
+        <set name="floors" catalog="forum" table="floor" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="cid"/>
             <one-to-many class="hub.po.floor.Floor"/>
         </set>
 
-        <set name="topics" catalog="forum" table="topic" inverse="true" cascade="all-delete-orphan">
+        <set name="topics" catalog="forum" table="topic" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="cid"/>
             <one-to-many class="hub.po.topic.Topic"/>
         </set>
 
-        <set name="floorDiscusses" catalog="forum" table="floordiscuss" inverse="true" cascade="all-delete-orphan">
+        <set name="floorDiscusses" catalog="forum" table="floordiscuss" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="cid"/>
             <one-to-many class="hub.po.floorDiscuss.FloorDiscuss"/>
         </set>
 
-        <set name="send" catalog="forum"  inverse="true" cascade="all-delete-orphan">
+        <set name="send" catalog="forum"  inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="sid" />
             <one-to-many class="hub.po.letter.Letter" />
         </set>
 
-        <set name="receive" catalog="forum"  inverse="true" cascade="all-delete-orphan">
+        <set name="receive" catalog="forum"  inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="rid"/>
             <one-to-many class="hub.po.letter.Letter" />
         </set>

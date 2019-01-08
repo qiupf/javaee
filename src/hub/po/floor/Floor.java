@@ -7,7 +7,7 @@ import hub.po.topic.Topic;
 import java.util.Date;
 import java.util.Set;
 
-public class Floor implements Comparable<Floor>{
+public class Floor implements Comparable<Floor> {
     private Integer id;
     private Integer floor;
     private String detail;
@@ -96,6 +96,6 @@ public class Floor implements Comparable<Floor>{
 
     @Override
     public int compareTo(Floor o) {
-        return this.floor-o.floor;
+        return this.floor - o.floor;
     }
 }

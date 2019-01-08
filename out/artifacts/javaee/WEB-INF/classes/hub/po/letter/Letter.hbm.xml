@@ -13,7 +13,7 @@
         <property name="theme" column="theme" type="java.lang.String"/>
         <property name="detail" column="detail" type="java.lang.String"/>
         <property name="read" column="read_" type="java.lang.Boolean"/>
-        <many-to-one name="sender" column="sid" class="hub.po.customer.Customer"/>
-        <many-to-one name="receiver" column="rid" class="hub.po.customer.Customer"/>
+        <many-to-one name="sender" column="sid" class="hub.po.customer.Customer" lazy="false"/>
+        <many-to-one name="receiver" column="rid" class="hub.po.customer.Customer" lazy="false"/>
     </class>
 </hibernate-mapping>

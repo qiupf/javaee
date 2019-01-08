@@ -23,9 +23,11 @@
     <div class="modeltop_content">
         <a href="#">${model.name}</a>
         <div style="margin-top:20px;margin-left: 15px">
-            <form action="">
-                <input type="submit" style="cursor: pointer" value="关注">
+            <form action="setFavorModelAction" method="post" style="float: left">
+                <input type="hidden" name="modelId" value="${model.id}">
+                <input type="submit" style="cursor: pointer" value="关注/取关">
             </form>
+            <a style="margin-left: 100px" href="addTopic.jsp">发帖</a>
         </div>
     </div>
 </div>
@@ -65,10 +67,10 @@
             <a href="#"><fmt:formatDate value="${date}" pattern="yyyy-MM-dd"/></a>
         </div>
         <div class="column5">
-            <a href="#"><s:property value="floors.size" /></a>
+            <a href="#"><s:property value="floors.size"/></a>
         </div>
         <div class="column5">
-            <a href="#"><s:property value="favorTopics.size" /></a>
+            <a href="#"><s:property value="favorTopics.size"/></a>
         </div>
     </div>
 </s:iterator>

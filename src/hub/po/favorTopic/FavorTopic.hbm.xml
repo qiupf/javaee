@@ -11,7 +11,7 @@
         </id>
 
         <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
-        <many-to-one name="topic" column="tid" class="hub.po.topic.Topic"/>
+        <many-to-one name="topic" column="tid" class="hub.po.topic.Topic" lazy="false"/>
 
         <property name="date" column="date" type="java.util.Date"/>
     </class>

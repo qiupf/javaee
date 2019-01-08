@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="S" uri="/struts-tags" %>
 <html>
 <head>
     <title>游戏论坛</title>
@@ -25,7 +26,8 @@
             <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="perinfo.jsp">个人资料</a></span>
         </div>
         <div class="secondin">
-            <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="modifyImg.jsp">修改头像</a></span>
+            <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a
+                    href="modifyImg.jsp">修改头像</a></span>
         </div>
         <div class="secondin">
             <span style="display:inline-block;margin-top: 10px;margin-left: 39px"><a href="#">账号绑定</a></span>
@@ -71,15 +73,15 @@
                 ${customer.account}
             </p>
             <p>
-                论坛积分：20
+                发帖数：<s:property value="#session.customer.topics.size"/>
             </p>
         </div>
         <div class="Rlevel">
             <p>
-                用户组： Lv：1
+                座右铭：${customer.motto}
             </p>
             <p style="margin-top: 30px">
-                发帖数：10
+                回复数：<s:property value="#session.customer.floors.size"/>
             </p>
         </div>
     </div>
@@ -89,7 +91,7 @@
                 <a href="#">
                     <img src="images/message.png" style="height: 70px;width: 70px;margin-top: 10px">
                     <p>
-                        未读消息
+                        <a href="missMessageAction">未读消息</a>
                     </p>
                 </a>
             </span>
@@ -99,11 +101,28 @@
                 <a href="#">
                     <img src="images/follow.png" style="height: 70px;width: 70px;margin-top: 10px">
                     <p>
-                        关注动态
+                        <a href="#">关注的人</a>
                     </p>
                 </a>
             </span>
         </div>
+
+    </div>
+    <div class="Rthird">
+        <s:if test="#session.customer.favorModels.size!=0">
+            <p>您关注的模块如下：</p>
+            <s:iterator value="#session.customer.favorModels">
+                <div class="Rmodel">
+                    <img src="modelImg/${model.image}" style="height: 100px;width: 100px" onerror="noModelImg()">
+                    <p>
+                            ${model.name}
+                    </p>
+                </div>
+            </s:iterator>
+        </s:if>
+        <s:else>
+            您还没有关注任何模块！
+        </s:else>
 
     </div>
 </div>

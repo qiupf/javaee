@@ -39,6 +39,7 @@ public class VisitorAction extends ActionSupport {
         session = ActionContext.getContext().getSession();
         List models = visitorService.getModels();
         session.put("models", models);
+        System.out.println(models);
         return "loadModelSuccess";
     }
 
@@ -48,12 +49,8 @@ public class VisitorAction extends ActionSupport {
         session = ActionContext.getContext().getSession();
         try {
             String modelId = ((String[]) params.get("modelId"))[0];
-            System.out.println(modelId);
             List topics = visitorService.getTopics(Integer.valueOf(modelId));
-            Model model=null;
-            if (!topics.isEmpty()) {
-                model = ((Topic) topics.get(0)).getModel();
-            }
+            Model model = visitorService.getModelById(Integer.valueOf(modelId));
             session.put("topics", topics);
             session.put("model", model);
             return "loadTopicSuccess";
@@ -70,13 +67,10 @@ public class VisitorAction extends ActionSupport {
         try {
             String topicId = ((String[]) params.get("topicId"))[0];
             System.out.println(topicId);
-            List floors=visitorService.getFloors(Integer.valueOf(topicId));
-            Topic topic=null;
-            if(!floors.isEmpty()){
-                topic= ((Floor)floors.get(0)).getTopic();
-            }
-            session.put("floors",floors);
-            session.put("topic",topic);
+            List floors = visitorService.getFloors(Integer.valueOf(topicId));
+            Topic topic = visitorService.getTopicById(Integer.valueOf(topicId));
+            session.put("floors", floors);
+            session.put("topic", topic);
             return "loadFloorSuccess";
         } catch (Exception e) {
             e.printStackTrace();
@@ -85,14 +79,14 @@ public class VisitorAction extends ActionSupport {
     }
 
 
-    public void validateLogin() {
+    /*public void validateLogin() {
         Integer account = loginUser.getId();
         String password = loginUser.getPassword();
         if (account == null)
             this.addFieldError("loginUser.id", "账号不能为空");
         if (password == null || password.equals(""))
             this.addFieldError("loginUser.password", "密码不能为空");
-    }
+    }*/
 
     public IVisitorService getVisitorService() {
         return visitorService;

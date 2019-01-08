@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public interface ICustomerService {
-    boolean updatePasswd(Customer customer,String oldpasswd);   //修改密码
+    boolean updatePasswd(Customer customer, String oldpasswd);   //修改密码
 
     void updateBasicInfo(Customer customer);    //修改基本资料
 
@@ -23,16 +23,18 @@ public interface ICustomerService {
 
     void setFavorTopic(Customer customer, Integer topicId);      //关注/取关话题
 
-    void addTopic(Customer customer, Topic topic);              //发布话题
+    void addTopic(Integer cid, Integer mid, Topic topic);              //发布话题
 
     void delTopic(Customer customer, Integer topicId);          //删除话题
 
-    void sendLetter(Customer customer, Integer sendId, Letter letter);          //发送私信
+    void editLetter(Integer cid);
 
-    void floorReply(Customer customer, Integer tid, Floor floor);               //楼内回复，回复楼主
+    void sendLetter(Integer cid, Integer rid, Letter letter);          //发送私信
+
+    void floorReply(Integer cid, Integer tid, Floor floor);               //楼内回复，回复楼主
 
     //层内回复，回复层主
-    void inFloorReply(Customer customer, Integer rid, Integer fid, FloorDiscuss inFloor);
+    void inFloorReply(Integer cid, Integer rid, Integer fid, FloorDiscuss inFloor);
 
     void praise(Integer fid);                                //赞某一楼
 

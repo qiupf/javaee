@@ -53,7 +53,7 @@ img{
 .inleft1 {
     height: 80px;
     width: 250px;
-    border-bottom-style: dashed;
+    border-bottom-style: solid;
 }
 
 .inleft2 {
@@ -76,17 +76,36 @@ img{
     height: 500px;
     width: 940px;
     background-color: #f3f2fb;
-
 }
 
 .inright1{
     height: 45px;
     width: 940px;
-    border-bottom-style:dotted;
+    border-bottom-style:solid;
 }
 
 .inright2{
-    height: 400px;
+    height: 360px;
     width: 940px;
-    border-bottom-style:dotted;
+}
+
+.inright3{
+    height: 80px;
+    width: 940px;
+}
+
+.inleft3left{
+    float: left;
+    height: 80px;
+    width: 1000px;
+    float: left;
+}
+
+
+.inright2top{
+
+}
+
+.inright2bottom{
+
 }

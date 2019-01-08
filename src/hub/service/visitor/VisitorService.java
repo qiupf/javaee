@@ -3,8 +3,10 @@ package hub.service.visitor;
 import com.opensymphony.xwork2.ActionContext;
 import hub.dao.IBasicDAO;
 import hub.po.customer.Customer;
+import hub.po.favorModel.FavorModel;
 import hub.po.favorTopic.FavorTopic;
 import hub.po.floor.Floor;
+import hub.po.letter.Letter;
 import hub.po.model.Model;
 import hub.po.topic.Topic;
 
@@ -30,6 +32,18 @@ public class VisitorService implements IVisitorService {
             return false;
         } else {
             customer = (Customer) list.get(0);
+            /*for (Topic t : customer.getTopics())
+                t.getCustomer();
+            for (Floor f : customer.getFloors())
+                f.getCustomer();
+            for (FavorModel fm : customer.getFavorModels())
+                fm.getCustomer();
+            for (FavorTopic ft : customer.getFavorTopics())
+                ft.getCustomer();
+            for (Letter ts : customer.getSend())
+                ts.getSender();
+            for (Letter tr : customer.getReceive())
+                tr.getReceiver();*/
             session.put("customer", customer);
             return true;
         }
@@ -49,13 +63,13 @@ public class VisitorService implements IVisitorService {
         Set temp = model.getTopics();
         List<Topic> topics = new ArrayList(temp);
         Collections.sort(topics);
-        for (Topic t : topics) {
+        /*for (Topic t : topics) {
             t.getCustomer().getTopics();
             for (Floor floor : t.getFloors())
                 floor.getTopic();
             for (FavorTopic favor : t.getFavorTopics())
                 favor.getTopic();
-        }
+        }*/
         return topics;
     }
 
@@ -66,27 +80,27 @@ public class VisitorService implements IVisitorService {
         List<Floor> floors = new ArrayList(temp);
         topic.getCustomer().getTopics();
         Collections.sort(floors);
-        for(Topic t:topic.getCustomer().getTopics())
+       /* for (Topic t : topic.getCustomer().getTopics())
             t.getCustomer();
         for (Floor f : floors) {
-            for(Topic t:f.getCustomer().getTopics())
+            for (Topic t : f.getCustomer().getTopics())
                 t.getCustomer();
-        }
+        }*/
         return floors;
     }
 
     @Override
     public Customer getCustomerById(Integer id) {
-        String hql="from Customer where id="+id;
+        String hql = "from Customer where id=" + id;
         return (Customer) basicDAO.query(hql).get(0);
     }
 
-    private Model getModelById(Integer id) {
+    public Model getModelById(Integer id) {
         String hql = "from Model where id=" + id;
         return (Model) basicDAO.query(hql).get(0);
     }
 
-    private Topic getTopicById(Integer id) {
+    public Topic getTopicById(Integer id) {
         String hql = "from Topic where id=" + id;
         return (Topic) basicDAO.query(hql).get(0);
     }

@@ -38,11 +38,12 @@
         </p>
         <br>
         <p>
-            发帖数：<s:property value="topic.customer.topics.size" />
+            发帖数：<s:property value="#session.topic.customer.topics.size"/>
         </p>
         <br>
         <span>
-            <form style="display:inline">
+            <form style="display:inline" action="editLetterAction" method="post">
+                <input type="hidden" name="rid" value="${topic.customer.id}">
                 <input type="submit" value="私信" style="cursor: pointer">
             </form>
             &emsp;&emsp;
@@ -59,27 +60,28 @@
         </div>
     </div>
     <div class="inright2">
-        ${topic.name}
+        ${topic.content}
     </div>
-    <div class="inright1">
-        <div style="float: right;margin-top:7px;margin-right: 5px">
-            <a href="#">赞</a>
-            &emsp;&emsp;
-            <a href="#">踩</a>
+    <div class="inright3">
+        <div class="inleft3left">
+            <form action="floorReplyAction" method="post">
+                <textarea name="floor.detail" style="width: 60%;height: 100%;float: left"></textarea>
+                <input type="submit" style="cursor: pointer;margin-top: 55px;margin-left: 10px" value="回复">
+            </form>
         </div>
     </div>
 </div>
 <s:iterator value="#session.floors" status="status">
     <div class="leftitem">
         <div class="inleft1">
-        <span style="display:inline-block;margin-top: 30px;margin-left: 90px;font-size: 25px">
-            <a href="#">${customer.account}</a>
-        </span>
+    <span style="display:inline-block;margin-top: 30px;margin-left: 90px;font-size: 25px">
+    <a href="#">${customer.account}</a>
+    </span>
         </div>
         <div class="inleft2">
-        <span style="display:inline-block;margin-top: 20px;margin-left: 30px;font-size: 25px">
-            <img style="cursor: pointer" src="upload/${customer.image}" onerror="nofind()">
-        </span>
+    <span style="display:inline-block;margin-top: 20px;margin-left: 30px;font-size: 25px">
+    <img style="cursor: pointer" src="upload/${customer.image}" onerror="nofind()">
+    </span>
         </div>
         <div class="inleft3">
             <p>
@@ -87,34 +89,57 @@
             </p>
             <br>
             <p>
-                发帖数：<s:property value="customer.topics.size" />
+                发帖数：<s:property value="customer.topics.size"/>
             </p>
             <br>
             <span>
-            <form style="display:inline">
+    <form style="display:inline" action="editLetterAction" method="post">
+    <input type="hidden" name="rid" value="${topic.customer.id}">
                 <input type="submit" value="私信" style="cursor: pointer">
-            </form>
-            &emsp;&emsp;
-            <form style="display:inline">
-                <input type="submit" value="关注" style="cursor: pointer">
-            </form>
-        </span>
+    </form>
+    &emsp;&emsp;
+    <form style="display:inline">
+    <input type="submit" value="关注" style="cursor: pointer">
+    </form>
+    </span>
         </div>
     </div>
     <div class="rightitem">
         <div class="inright1">
             <div style="float: right;margin-top:7px;margin-right: 5px">
-                ${status.count}楼
+                    ${status.count}楼
             </div>
         </div>
         <div class="inright2">
-                ${detail}
+            <div style="width: 940px;height: 120px;background: cornsilk">
+                    ${detail}
+            </div>
+            <div style="width: 940px;height: 200px;background: #f9f9f9">
+                <s:iterator value="floorDiscusses" status="status">
+                    <div style="float: left;width: 800px">
+                            ${customer.account}回复：${detail}
+                    </div>
+                    <div style="float: right">
+                            ${date}
+                    </div>
+                </s:iterator>
+            </div>
         </div>
-        <div class="inright1">
-            <div style="float: right;margin-top:7px;margin-right: 5px">
-                <a href="#">赞</a>
-                &emsp;&emsp;
-                <a href="#">踩</a>
+        <div class="inright3">
+            <div class="inleft3left">
+                <form action="inFloorReplyAction" method="post">
+                    <textarea name="floorDiscuss.detail" style="width: 60%;height: 100%;float: left"></textarea>
+                    <input type="hidden" style="float: left" name="rid" value="${customer.id}"/>
+                    <input type="hidden" style="float: left" name="fid" value="${id}"/>
+                    <input type="submit" style="cursor: pointer;margin-top: 55px;margin-left: 10px;float: left"
+                           value="回复">
+                </form>
+                <div style="margin-top: 55px">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <a href="praiseAction?floorId=${id}">赞${good}</a>
+                    &emsp;&emsp;
+                    <a href="stepAction?floorId=${id}">踩${bad}</a>
+                </div>
             </div>
         </div>
     </div>

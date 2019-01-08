@@ -10,8 +10,8 @@
             <generator class="increment"/>
         </id>
 
-        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
-        <many-to-one name="model" column="mid" class="hub.po.model.Model"/>
+        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer" />
+        <many-to-one name="model" column="mid" class="hub.po.model.Model" lazy="false"/>
 
         <property name="date" column="date" type="java.util.Date"/>
     </class>

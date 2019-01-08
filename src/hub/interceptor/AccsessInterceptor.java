@@ -11,11 +11,11 @@ import java.util.Map;
 public class AccsessInterceptor extends AbstractInterceptor {
     @Override
     public String intercept(ActionInvocation actionInvocation) throws Exception {
-        ActionContext ctx=actionInvocation.getInvocationContext();
-        Map session=ctx.getSession();
-        if(session.get("customer")!=null){
+        ActionContext ctx = actionInvocation.getInvocationContext();
+        Map session = ctx.getSession();
+        if (session.get("customer") != null) {
             return actionInvocation.invoke();
-        }else {
+        } else {
             return Action.LOGIN;
         }
     }

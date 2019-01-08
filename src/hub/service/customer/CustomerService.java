@@ -14,10 +14,7 @@ import hub.po.topic.Topic;
 import org.apache.struts2.ServletActionContext;
 
 import java.io.*;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class CustomerService implements ICustomerService {
     private IBasicDAO basicDAO;
@@ -104,6 +101,7 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void setFavorModel(Customer customer, Integer modelId) {
+        session = ActionContext.getContext().getSession();
         customer = getCustomerById(customer.getId());
         Set<FavorModel> favorModels = customer.getFavorModels();
         boolean flag = false;
@@ -123,7 +121,9 @@ public class CustomerService implements ICustomerService {
             favorModels.add(newFavorModel);
         }
         customer.setFavorModels(favorModels);
+        session.put("customer", customer);
     }
+
 
     @Override
     public void setFavorTopic(Customer customer, Integer topicId) {
@@ -148,17 +148,19 @@ public class CustomerService implements ICustomerService {
         customer.setFavorTopics(favorTopics);
     }
 
-    public void addTopic(Customer customer, Topic topic) {
-        customer = getCustomerById(customer.getId());
-        Model model = getModelById(topic.getModel().getId());
-        Set<Topic> topics = customer.getTopics();
+    @Override
+    public void addTopic(Integer cid, Integer mid, Topic topic) {
+        Customer c = getCustomerById(cid);
+        Model m = getModelById(mid);
+        Set<Topic> topics = c.getTopics();
         topic.setDate(new Date());
-        topic.setCustomer(customer);
-        topic.setModel(model);
+        topic.setCustomer(c);
+        topic.setModel(m);
         topic.setTop(false);
         topics.add(topic);
-        customer.setTopics(topics);
+        c.setTopics(topics);
     }
+
 
     @Override
     public void delTopic(Customer customer, Integer topicId) {
@@ -174,9 +176,16 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public void sendLetter(Customer customer, Integer sendId, Letter letter) {
-        customer = getCustomerById(customer.getId());
-        Customer receiver = getCustomerById(sendId);
+    public void editLetter(Integer cid) {
+        session = ActionContext.getContext().getSession();
+        Customer c = getCustomerById(cid);
+        session.put("receiver", c);
+    }
+
+    @Override
+    public void sendLetter(Integer cid, Integer rid, Letter letter) {
+        Customer customer = getCustomerById(cid);
+        Customer receiver = getCustomerById(rid);
         letter.setDate(new Date());
         letter.setRead(false);
         letter.setSender(customer);
@@ -187,43 +196,63 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public void floorReply(Customer customer, Integer tid, Floor floor) {
-        customer = getCustomerById(customer.getId());
+    public void floorReply(Integer cid, Integer tid, Floor floor) {
+        session = ActionContext.getContext().getSession();
+        Customer customer = getCustomerById(cid);
         Topic topic = getTopicById(tid);
         floor.setDate(new Date());
+        floor.setFloor(topic.getFloors().size() + 1);
         floor.setGood(0);
         floor.setBad(0);
         floor.setTopic(topic);
         floor.setCustomer(customer);
-        Set<Floor> floors = customer.getFloors();
+        Set<Floor> floors = topic.getFloors();
         floors.add(floor);
-        customer.setFloors(floors);
+        topic.setFloors(floors);
+        session.put("floors", floors);
     }
 
     @Override
-    public void inFloorReply(Customer customer, Integer rid, Integer fid, FloorDiscuss inFloor) {
-        customer = getCustomerById(customer.getId());
+    public void inFloorReply(Integer cid, Integer rid, Integer fid, FloorDiscuss inFloor) {
+        session = ActionContext.getContext().getSession();
+        Customer customer = getCustomerById(cid);
         Customer replyTo = getCustomerById(rid);
         Floor floor = getFloorById(fid);
         inFloor.setDate(new Date());
         inFloor.setCustomer(customer);
         inFloor.setReply(replyTo);
         inFloor.setFloor(floor);
-        Set<FloorDiscuss> inFloors = customer.getFloorDiscusses();
+        Set<FloorDiscuss> inFloors = floor.getFloorDiscusses();
         inFloors.add(inFloor);
-        customer.setFloorDiscusses(inFloors);
+        floor.setFloorDiscusses(inFloors);
     }
 
     @Override
     public void praise(Integer fid) {
+        session = ActionContext.getContext().getSession();
         Floor floor = getFloorById(fid);
+        //System.out.println(floor.getGood());
+        //System.out.println("asdfdsfs");
         floor.setGood(floor.getGood() + 1);
+        List<Floor> floors = (List) session.get("floors");
+        for (Floor f : floors) {
+            if (f.getId().equals(fid))
+                f.setGood(f.getGood() + 1);
+        }
+        session.put("floors", floors);
     }
 
     @Override
     public void step(Integer fid) {
+        session = ActionContext.getContext().getSession();
         Floor floor = getFloorById(fid);
         floor.setBad(floor.getBad() + 1);
+        List<Floor> floors = (List) session.get("floors");
+        for (Floor f : floors) {
+            if (f.getId().equals(fid))
+                f.setBad(f.getBad() + 1);
+        }
+        session.put("floors", floors);
     }
 
     public IBasicDAO getBasicDAO() {
@@ -253,4 +282,6 @@ public class CustomerService implements ICustomerService {
         String hql = "from Floor where id=" + id;
         return (Floor) basicDAO.query(hql).get(0);
     }
+
+
 }

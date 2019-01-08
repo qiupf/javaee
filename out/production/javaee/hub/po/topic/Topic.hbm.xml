@@ -10,23 +10,24 @@
             <generator class="increment"/>
         </id>
 
-        <many-to-one name="model" column="mid" class="hub.po.model.Model"/>
-        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer"/>
+        <many-to-one name="model" column="mid" class="hub.po.model.Model" lazy="false"/>
+        <many-to-one name="customer" column="cid" class="hub.po.customer.Customer" lazy="false"/>
 
         <property name="mode" column="tmode" type="java.lang.String" length="10"/>
         <property name="name" column="tname" type="java.lang.String" length="100"/>
-        <property name="content" column="content" type="java.lang.String" length="600" />
+        <property name="content" column="content" type="java.lang.String" length="600"/>
         <property name="top" column="top" type="java.lang.Boolean"/>
         <property name="date" column="date" type="java.util.Date"/>
 
         <!-- 发言记录一对多 级联删除 -->
-        <set name="floors" catalog="forum" table="discuss" inverse="true" cascade="all-delete-orphan">
+        <set name="floors" catalog="forum" table="discuss" inverse="true" cascade="all-delete-orphan" lazy="false">
             <key column="tid"/>
             <one-to-many class="hub.po.floor.Floor"/>
         </set>
 
         <!-- 被关注一对多 级联删除 -->
-        <set name="favorTopics" catalog="forum" table="favortopic" inverse="true" cascade="all-delete-orphan">
+        <set name="favorTopics" catalog="forum" table="favortopic" inverse="true" cascade="all-delete-orphan"
+             lazy="false">
             <key column="tid"/>
             <one-to-many class="hub.po.favorTopic.FavorTopic"/>
         </set>

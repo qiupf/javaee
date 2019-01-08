@@ -11,10 +11,11 @@
 <div class="current">
     <img src="upload/${customer.image}" onerror="nofind()">
 </div>
+
 <p>修改头像</p>
-<s:form action="modifyImg" method="post" enctype="multipart/form-data">
-    <s:file name="photo" label="选择图片" />
-    <s:submit value="确定" />
+<s:form action="modifyImgAction" method="post" enctype="multipart/form-data">
+    <s:file name="photo" label="选择图片"/>
+    <s:submit value="确定"/>
 </s:form>
 <a href="percenter.jsp">返回个人中心</a>
 </body>

@@ -9,11 +9,24 @@
         <!--配置权限管理器-->
         <interceptors>
             <interceptor name="accessInterceptor" class="hub.interceptor.AccsessInterceptor"/>
+            <interceptor name="topicInterceptor" class="hub.interceptor.TopicInterceptor"/>
+            <interceptor name="floorInterceptor" class="hub.interceptor.FloorInterceptor"/>
         </interceptors>
 
-        <action name="modifyImg" class="customerAction" method="modifyImg">
+        <action name="*Action" class="customerAction" method="{1}">
             <result name="modifyImgSuccess" type="redirect">/modifyImg.jsp</result>
             <result name="modifyImgFail" type="redirect">/modifyImgFail.jsp</result>
+            <result name="praiseSuccess" type="redirect">/floor.jsp</result>
+            <result name="stepSuccess" type="redirect">/floor.jsp</result>
+            <result name="logoutSuccess" type="redirect">/home.jsp</result>
+            <result name="setFavorModelSuccess" type="redirect">/topic.jsp</result>
+            <result name="floorReplySuccess" type="redirect">/floor.jsp</result>
+            <result name="inFloorReplySuccess" type="redirect">/floor.jsp</result>
+            <result name="editLetterSuccess" type="redirect">/sendLetter.jsp</result>
+            <result name="sendLetterSuccess" type="redirect">/sendLetterSuccess.jsp</result>
+            <result name="addTopicSuccess" type="redirect">/topic.jsp</result>
+            <result name="missMessageSuccess" type="redirect">/message.jsp</result>
+
             <result name="login" type="redirect">/login.jsp</result>
             <result name="input" type="redirect">/modifyImgFail.jsp</result>
             <interceptor-ref name="defaultStack">
@@ -33,12 +46,32 @@
             <result name="input">/login.jsp</result>
         </action>
 
-        <action name="*Action" class="visitorAction" method="{1}">
+        <action name="loadModelAction" class="visitorAction" method="loadModel">
+            <result name="loadModelSuccess" type="redirect">/home.jsp</result>
+        </action>
+
+        <action name="loadTopicAction" class="visitorAction" method="loadTopic">
+            <result name="loadTopicSuccess" type="redirect">/topic.jsp</result>
+            <result name="loadModel" type="redirect">/home.jsp</result>
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="topicInterceptor"/>
+        </action>
+
+        <action name="loadFloorAction" class="visitorAction" method="loadFloor">
+            <result name="loadFloorSuccess" type="redirect">/floor.jsp</result>
+            <result name="loadTopic" type="redirect">/topic.jsp</result>
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="floorInterceptor"/>
+        </action>
+
+        <!--<action name="*Action" class="visitorAction" method="{1}">
             <result name="loadModelSuccess" type="redirect">/home.jsp</result>
             <result name="loadTopicSuccess" type="redirect">/topic.jsp</result>
             <result name="loadFloorSuccess" type="redirect">/floor.jsp</result>
-        </action>
-
+            <result name="loadModel" type="redirect">/home.jsp</result>
+            <interceptor-ref name="defaultStack" />
+            <interceptor-ref name="topicInterceptor" />
+        </action>-->
 
         <action name="test" class="testAction" method="test">
             <result name="success">/topic.jsp</result>

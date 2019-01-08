@@ -9,14 +9,16 @@
         http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
-    <aop:aspectj-autoproxy />
+    <aop:aspectj-autoproxy/>
     <!--连接池配置-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!--基本配置-->
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/forum?serverTimezone=GMT%2B8"/>
+        <!--<property name="jdbcUrl" value="jdbc:mysql://118.24.39.237:3306/forum"/>-->
         <property name="user" value="root"/>
         <property name="password" value="qiupf1231"/>
+        <!--<property name="password" value="root"/>-->
         <!--配置数据库连接池(c3p0)-->
         <property name="initialPoolSize" value="10"/>
         <property name="minPoolSize" value="3"/>
@@ -32,7 +34,6 @@
             <list>
                 <value>hub/po/letter/Letter.hbm.xml</value>
                 <value>hub/po/admin/Admin.hbm.xml</value>
-                <value>hub/po/user/User.hbm.xml</value>
                 <value>hub/po/customer/Customer.hbm.xml</value>
                 <value>hub/po/floor/Floor.hbm.xml</value>
                 <value>hub/po/floorDiscuss/FloorDiscuss.hbm.xml</value>
@@ -47,8 +48,8 @@
             <value>
                 hibernate.hbm2ddl.auto=update
                 hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-                hibernate.show_sql=true
-                format_sql=true
+                <!--hibernate.show_sql=true
+                format_sql=true-->
             </value>
         </property>
     </bean>
@@ -68,6 +69,7 @@
             <tx:method name="setFavorTopic" propagation="REQUIRED"/>
             <tx:method name="addTopic" propagation="REQUIRED"/>
             <tx:method name="delTopic" propagation="REQUIRED"/>
+            <tx:method name="editLetter" propagation="REQUIRED"/>
             <tx:method name="sendLetter" propagation="REQUIRED"/>
             <tx:method name="floorReply" propagation="REQUIRED"/>
             <tx:method name="inFloorReply" propagation="REQUIRED"/>
@@ -87,35 +89,36 @@
     <bean id="baseDao" class="hub.dao.BaseDao">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
-    <bean id="basicDao" class="hub.dao.BasicDAO" parent="baseDao" />
+    <bean id="basicDao" class="hub.dao.BasicDAO" parent="baseDao"/>
 
     <!--Service层配置-->
     <bean id="adminService" class="hub.service.admin.AdminService">
-        <property name="basicDAO" ref="basicDao" />
+        <property name="basicDAO" ref="basicDao"/>
     </bean>
     <bean id="customerService" class="hub.service.customer.CustomerService">
-        <property name="basicDAO" ref="basicDao" />
+        <property name="basicDAO" ref="basicDao"/>
     </bean>
     <bean id="visitorService" class="hub.service.visitor.VisitorService">
-        <property name="basicDAO" ref="basicDao" />
+        <property name="basicDAO" ref="basicDao"/>
     </bean>
 
     <!--Action层配置-->
     <bean id="adminAction" class="hub.action.AdminAction" scope="prototype">
-        <property name="adminService" ref="adminService" />
+        <property name="adminService" ref="adminService"/>
     </bean>
     <bean id="customerAction" class="hub.action.CustomerAction" scope="prototype">
-        <property name="customerService" ref="customerService" />
+        <property name="customerService" ref="customerService"/>
+        <property name="visitorService" ref="visitorService" />
     </bean>
     <bean id="visitorAction" class="hub.action.VisitorAction" scope="prototype">
-        <property name="visitorService" ref="visitorService" />
+        <property name="visitorService" ref="visitorService"/>
     </bean>
 
     <!--测试action-->
     <bean id="testAction" class="hub.action.TestAction">
-        <property name="adminService" ref="adminService" />
-        <property name="customerService" ref="customerService" />
-        <property name="visitorService" ref="visitorService" />
+        <property name="adminService" ref="adminService"/>
+        <property name="customerService" ref="customerService"/>
+        <property name="visitorService" ref="visitorService"/>
     </bean>
 
 </beans>

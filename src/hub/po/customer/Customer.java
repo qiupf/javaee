@@ -10,6 +10,7 @@ import hub.po.topic.Topic;
 
 import java.util.Date;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Customer {
     private Integer id;
@@ -21,15 +22,15 @@ public class Customer {
     private Date birthday;
 
     private Set<Friend> friends;//好友 级联删除好友表
-    private Set<FavorModel> favorModels;//关注的模块 级联删除关注模块表
-    private Set<FavorTopic> favorTopics;//关注的话题 级联删除关注话题表
+    private Set<FavorModel> favorModels=new TreeSet<>();//关注的模块 级联删除关注模块表
+    private Set<FavorTopic> favorTopics=new TreeSet<>();//关注的话题 级联删除关注话题表
 
-    private Set<Topic> topics;//发布过的话题 级联删除发布过的话题
-    private Set<Floor> floors;//层发言记录 级联删除floor表
-    private Set<FloorDiscuss> floorDiscusses;//层内发言记录 级联删除
-    private Set<Letter> send;       //私信发送方
-    private Set<Letter> receive;   //私信接收方
-    private Set<Friend> follows;//被关注 追随者 若客户注销 级联删除好友表
+    private Set<Topic> topics=new TreeSet<>();//发布过的话题 级联删除发布过的话题
+    private Set<Floor> floors=new TreeSet<>();//层发言记录 级联删除floor表
+    private Set<FloorDiscuss> floorDiscusses=new TreeSet<>();//层内发言记录 级联删除
+    private Set<Letter> send=new TreeSet<>();       //私信发送方
+    private Set<Letter> receive=new TreeSet<>();   //私信接收方
+    private Set<Friend> follows=new TreeSet<>();//被关注 追随者 若客户注销 级联删除好友表
     /* 保留被关注和被回复 */
     //private Set<FloorDiscuss> floorReplys;//层内被回复
 
